@@ -2,7 +2,7 @@
 This project is to build application to track covid-19 close contacts within last 14 days for a covid-19 positive patient 
 
 # Background
-Humanity is in crisis due to covid-19 global outbreak which is already declared as a pandemic. This is high time we need to get the best of our technology to solve parts of this global crisis. One of the most difficult challenges for any government of the affected counties is to flatten the curve of infection. Early detection of already affected patients is the most important part to flatten the curve. When a patient is identified as covid-19 positive, government is trying to get close contacts of the patient following manual steps by asking to the friends and family members and so on. However, this approach has many limitations in terms of information accuracy retrieval duration due to,
+Humanity is in crisis due to covid-19 global outbreak which is already declared as a pandemic. This is high time we need to get the best of our technology to solve parts of this global crisis. One of the most difficult challenges for any government of the affected counties is to flatten the curve of infection. Early detection of already affected patients is the most important part to flatten the curve. When a patient is identified as covid-19 positive, government is trying to get close contacts of the patient following manual steps by asking to the friends and family members and so on. However, this approach has many limitations in terms of information accuracy, retrieval delay, etc. due to mostly,
 
 1. Falsified information from F&F
 2. Hidden information by Family to avoid social embarrassment
@@ -17,6 +17,12 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 4. The application will use GPS (Global Positioning System) to detect all the loose contacts and close contacts of the citizens and store the histories in data server for last couple of weeks (i.e. >14 days, configurable).
 
 # How the app will work
-We know most of the time we keep our smartphones with us even when we talk to other, gather, hangout, dine and attend any festivals. If the app is ideally installed in all the smartphones of the citizen. Close contacts for a certain duration (i.e. more than 2/3 ~ 5/10 mins) can be easily detected by GPS and immediately logged into server. Later if one of the citizen is identified covid-19 positive, government can find the full close contact tree with even other detail information like (contact duration, distance, time and place). That would be off course a very accurate information for the government to identify the candidates for quarantine and further immediate testing.
+We know most of the time we keep our smartphones with us even when we talk to other, gather, hangout, dine and attend any festivals. If the app is ideally installed in all the smartphones of the citizen. Close contacts for a certain duration (i.e. more than 2/3 ~ 5/10 mins) can be easily detected by GPS and immediately logged into server. Later if one of the citizen is identified covid-19 positive, government can find the full close contact tree with even other detail information like (contact duration, distance, time and place). That would be off course generate very accurate information for the government to identify the candidates for quarantine and further immediate testing.
+
+# Core challenges
+1. App Installation - many citizen will have no smartphone hence they will be out of this project. However, that would not be issue because at least a large part of the citizens can be covered with this project.
+2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between Health VS. Privacy, nobody want to loose health.
+3. Storage - Storage as a part of infrastructure will be challenge. However we can only keep last couple of days i.e. 14 days data into server so that the storage will be constant and easily scalable.
+
 
 TBC...
