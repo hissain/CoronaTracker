@@ -16,6 +16,10 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 3. All the close contact data of all citizen will be stored in a central or distributed server.
 4. The application will use GPS (Global Positioning System) to detect all the loose contacts and close contacts of the citizens and store the histories in data server for last couple of weeks (i.e. >14 days, configurable).
 
+# Idea: illustration
+
+![Conceptual Illutration](https://github.com/hissain/CoronaTracker/blob/master/architecture/ctracker-datascheme.png)
+
 # How the app will work
 We know most of the time we keep our smartphones with us even when we talk to other, gather, hangout, dine and attend any festivals. If the app is ideally installed in all the smartphones of the citizen. Close contacts for a certain duration (i.e. more than 2/3 ~ 5/10 mins) can be easily detected by GPS and immediately logged into server. Later if one of the citizen is identified covid-19 positive, government can find the full close contact tree with even other detail information like (contact duration, distance, time and place). That would be off course generate very accurate information for the government to identify the candidates for quarantine and further immediate testing.
 
