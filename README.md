@@ -16,17 +16,17 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 3. All the close contact data of all citizen will be stored in a central or distributed server.
 4. The application will use GPS (Global Positioning System) to detect all the loose contacts and close contacts of the citizens and store the histories in data server for last couple of weeks (i.e. >14 days, configurable).
 
-# Idea: illustration
+# Idea: Illustration
 
 ![Conceptual Illutration](https://github.com/hissain/CoronaTracker/blob/master/architecture/ctracker-datascheme.png)
 
-# How the app will work
-We know most of the time we keep our smartphones with us even when we talk to other, gather, hangout, dine and attend any festivals. If the app is ideally installed in all the smartphones of the citizen. Close contacts for a certain duration (i.e. more than 2/3 ~ 5/10 mins) can be easily detected by GPS and immediately logged into server. Later if one of the citizen is identified covid-19 positive, government can find the full close contact tree with even other detail information like (contact duration, distance, time and place). That would be off course generate very accurate information for the government to identify the candidates for quarantine and further immediate testing.
+# How It Works?
+We know most of the time we keep our smartphones with us even when we talk to other, gather, hangout, dine and attend festivals. If CoronaTracker app is ideally installed in the smartphones of all the citizens of the country, close contacts of a covid-19 positive patient for a certain duration (i.e. more than 2/3 ~ 5/10 mins) can be easily detected by GPS/BL/NFC and immediately logged into server. Later, if one of the citizens is identified as covid-19 positive, government can find the full close contacts tree linkages with other detail information like contact durations, distances, times and places. That would be off course generate very accurate information for the government to identify the candidates eligible to quarantine and further immediate testings. 
 
-# Core challenges
+# Core Challenges
 1. App Installation - many citizen will have no smartphone hence they will be out of this project. However, that would not be issue because at least a large part of the citizens can be covered with this project.
-2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between Health vs. Privacy, nobody want to loose Health.
-3. Storage - Storage as a part of infrastructure will be challenge. However we can only keep last couple of days i.e. 14 days data into server so that the storage will be constant and easily scalable.
+2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between health vs. privacy, nobody want to loose health.
+3. Storage - Storage as a part of infrastructure will be a challenge. However, we can only keep raw data for last couple of days i.e. ( 14 days data ) into server so that the storage will be lenear and easily scalable.
 
 # Contact
 Please feel free to send email to (hissain.khan@gmail.com), if you want to contribute to this project.
