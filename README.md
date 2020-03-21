@@ -1,5 +1,5 @@
 # CoronaTracker
-This project is to build application to track covid-19 close contacts within last 14 days for a covid-19 positive patient 
+This project is to build application to track the close contacts within last 14 days for a covid-19 positive patient 
 
 # Background
 Humanity is in crisis due to covid-19 global outbreak which is already declared as a pandemic. This is high time we need to get the best of our technology to solve parts of this global crisis. One of the most difficult challenges for any government of the affected counties is to flatten the curve of infection. Early detection of already affected patients is the most important part to flatten the curve. When a patient is identified as covid-19 positive, government is trying to get close contacts of the patient following manual steps by asking to the friends and family members and so on. However, this approach has many limitations in terms of information accuracy, retrieval delay, etc. due to mostly,
@@ -21,8 +21,8 @@ We know most of the time we keep our smartphones with us even when we talk to ot
 
 # Core challenges
 1. App Installation - many citizen will have no smartphone hence they will be out of this project. However, that would not be issue because at least a large part of the citizens can be covered with this project.
-2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between Health VS. Privacy, nobody want to loose health.
+2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between Health vs. Privacy, nobody want to loose Health.
 3. Storage - Storage as a part of infrastructure will be challenge. However we can only keep last couple of days i.e. 14 days data into server so that the storage will be constant and easily scalable.
 
-
-TBC...
+# Contact
+Please feel free to send email to (hissain.khan@gmail.com), if you want to contribute to this project.
