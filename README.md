@@ -2,12 +2,12 @@
 This project is to build application to track the close contacts within last 14 days for a covid-19 positive patient 
 
 # Background
-Humanity is in crisis due to covid-19 global outbreak which is already declared as a pandemic. This is high time we need to get the best of our technology to solve parts of this global crisis. One of the most difficult challenges for any government of the affected counties is to flatten the curve of infection. Early detection of already affected patients is the most important part to flatten the curve. When a patient is identified as covid-19 positive, government is trying to get close contacts of the patient following manual steps by asking to the friends and family members and so on. However, this approach has many limitations in terms of information accuracy, retrieval delay, etc. due to mostly,
+Humanity is in crisis due to covid-19 global outbreak which is already declared as a pandemic. This is high time we need to get the best of our technology to solve parts of this global crisis. One of the most difficult challenges for any government of the affected counties is to flatten the curve of infection. Early detection of already affected patients is the most important part to flatten the curve. When a patient is identified as covid-19 positive, government is trying to get close contacts information of the patient following manual steps like, by asking to the friends and family of the affected and so on. However, this approach has many limitations in terms of information accuracy, information retrieval delay etc. due to mostly,
 
 1. Falsified information from F&F
-2. Hidden information by Family to avoid social embarrassment
+2. Hidden information by families to avoid social embarrassment
 3. Unknown or missing information of the patient
-4. Delayed retrieval of information due to manual processes
+4. Delayed information retrieval due to manual processes
 5. And many more
 
 # Idea: How Technology can help?
