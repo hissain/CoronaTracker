@@ -1,21 +1,21 @@
-package com.ctracker.server.data;
+package com.ctracker.server.model;
 
 
-public class CoronaUser {
+public class CTUser {
 	
 	private Long userId;
 	private String userNid;
 	private String userName;
 	private String userDuid;
 	
-	public CoronaUser() {}
-	public CoronaUser(String userNid, String userName, String userDuid) {
+	public CTUser() {}
+	public CTUser(String userNid, String userName, String userDuid) {
 		super();
 		this.userNid = userNid;
 		this.userName = userName;
 		this.userDuid = userDuid;
 	}
-	public CoronaUser(Long userId, String userNid, String userName, String userDuid) {
+	public CTUser(Long userId, String userNid, String userName, String userDuid) {
 		super();
 		this.userId = userId;
 		this.userNid = userNid;

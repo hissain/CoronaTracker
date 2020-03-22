@@ -2,10 +2,12 @@ package com.ctracker.server.data;
 
 import java.util.List;
 
+import com.ctracker.server.model.CTUser;
+
 public interface UserRepository {
 	
-	Long addUser(CoronaUser user);
+	Long addUser(CTUser user);
 	
-	List<CoronaUser> findAll();
+	List<CTUser> findAll();
 
 }

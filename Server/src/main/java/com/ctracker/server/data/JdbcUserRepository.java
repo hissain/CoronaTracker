@@ -12,6 +12,8 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import com.ctracker.server.model.CTUser;
+
 @Repository
 public class JdbcUserRepository implements UserRepository {
 
@@ -19,10 +21,10 @@ public class JdbcUserRepository implements UserRepository {
     private JdbcTemplate jdbcTemplate;
 	
 	@Override
-	public List<CoronaUser> findAll() {
+	public List<CTUser> findAll() {
 
 		return jdbcTemplate.query( "select * from users", (rs, rowNum) ->
-            new CoronaUser(
+            new CTUser(
                     rs.getLong("user_id"),
                     rs.getString("user_nid"),
                     rs.getString("user_name"),
@@ -32,7 +34,7 @@ public class JdbcUserRepository implements UserRepository {
 	}
 
 	@Override
-	public Long addUser(CoronaUser user) {
+	public Long addUser(CTUser user) {
 		
 		try {
 			final String INSERT_SQL = "INSERT INTO users (user_nid, user_name, user_duid) VALUES (?, ?, ?)";
@@ -49,7 +51,6 @@ public class JdbcUserRepository implements UserRepository {
 			        }
 			    },
 			    keyHolder);
-				System.out.println(keyHolder);
 				return keyHolder.getKey().longValue();
 		}catch (Exception e) {
 			e.printStackTrace();
