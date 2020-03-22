@@ -13,8 +13,9 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 # Idea: How Technology Can Help?
 1. An application can be developed within short time which will be running in most of the popular platforms (Android, iOS).
 2. Bangladeshi government need to enforce the installation of this application to all of its citizens as part of civil duty. Deployment policy and strategy can be devised after more analysis. Operator like, GP, Robi, BL can be doorways.
-3. All the location along with close contact incident data of all the citizens will be stored in a central server.
-4. The application will use GPS (Global Positioning System) to track the path of user and detect all close contacts of the citizens and store the histories in data server for last couple of weeks (i.e. >14 days, configurable).
+3. Nation ID (NID) will be used for registering with the server as the detail of the patient can be easily extracted by government using NID.
+4. All the location along with close contact incident data of all the citizens will be stored in a central server.
+5. The application will use GPS (Global Positioning System) to track the path of user and detect all close contacts of the citizens and store the histories in data server for last couple of weeks (i.e. >14 days, configurable).
 
 # Idea: Illustration
 
@@ -25,8 +26,10 @@ We know most of the time we keep our smartphones with us even when we talk, walk
 
 # Core Challenges
 1. App Installation - many citizen will have no smartphone hence they will be out of this project. However, that would not be issue because at least a large part of the citizens can be covered with this project.
-2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between health vs. privacy, nobody want to loose health.
-3. Storage - Storage as a part of infrastructure will be a challenge. However, we can only keep raw data for last couple of days i.e. ( 14 days data ) into server so that the storage will be lenear and easily scalable.
+2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between health vs. privacy, nobody want to loose health. Moreover, only government will have read access to citizens close contacts only (not all location info) to avoid social chaos and privacy issue.
+3. Computation/Storage - Storage as a part of infrastructure will be a challenge. However, we can only keep raw data for last couple of days i.e. ( 14 days data ) into server so that the storage will be linear and easily scalable. Computation can be quickly outsourced to IAS provider, like Amazon/GoogleCloud etc.
 
 # Contact
 Please feel free to send email to (hissain.khan@gmail.com), if you want to contribute to this project.
+
+
