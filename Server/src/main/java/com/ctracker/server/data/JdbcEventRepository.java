@@ -30,7 +30,7 @@ public class JdbcEventRepository implements EventRepository {
                     rs.getFloat("event_lat"),
                     rs.getFloat("event_lon"),
                     rs.getFloat("event_alt"),
-                    rs.getLong("event_time")
+                    rs.getTimestamp("event_time").getTime()
             )
         );
 	}
