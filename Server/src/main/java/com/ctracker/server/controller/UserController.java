@@ -5,25 +5,39 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ctracker.server.data.*;
+import com.ctracker.server.service.UserAuthorizer;
 
 @RestController
 public class UserController {
 	
 	@Autowired
-	JdbcUserRepository jdbcService;
+	private JdbcUserRepository jdbcService;
+	
+	@Autowired
+	private UserAuthorizer authorizer;
 	
 	@PostMapping("/users")
-	String addUser() {
+	CoronaUser addUser(@RequestBody CoronaUser user) {
 		
-		return "User added";
+		if (authorizer.isValidNid(user.getUserNid())) {
+			
+
+			Long res = jdbcService.addUser(user);
+			if (res > 0) {
+			
+				user.setUserId(res);
+				return user;
+			}
+		}
+		return null;
 	}
 	
 	@GetMapping("/users")
 	List<CoronaUser> findUsers() {
 		return jdbcService.findAll();
 	}
-	
 }

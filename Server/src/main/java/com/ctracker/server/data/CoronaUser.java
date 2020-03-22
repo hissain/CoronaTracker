@@ -8,6 +8,13 @@ public class CoronaUser {
 	private String userName;
 	private String userDuid;
 	
+	public CoronaUser() {}
+	public CoronaUser(String userNid, String userName, String userDuid) {
+		super();
+		this.userNid = userNid;
+		this.userName = userName;
+		this.userDuid = userDuid;
+	}
 	public CoronaUser(Long userId, String userNid, String userName, String userDuid) {
 		super();
 		this.userId = userId;
