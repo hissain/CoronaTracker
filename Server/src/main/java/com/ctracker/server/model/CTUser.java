@@ -2,12 +2,12 @@ package com.ctracker.server.model;
 
 
 public class CTUser {
-	
+
 	private Long userId;
 	private String userNid;
 	private String userName;
 	private String userDuid;
-	
+
 	public CTUser() {}
 	public CTUser(String userNid, String userName, String userDuid) {
 		super();

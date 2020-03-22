@@ -12,41 +12,44 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import com.ctracker.server.model.CTUser;
+import com.ctracker.server.model.CTEvent;
 
 @Repository
-public class JdbcUserRepository implements UserRepository {
+public class JdbcEventRepository implements EventRepository {
 
 	@Autowired
     private JdbcTemplate jdbcTemplate;
 
 	@Override
-	public List<CTUser> findAll() {
+	public List<CTEvent> findAll() {
 
-		return jdbcTemplate.query( "select * from users", (rs, rowNum) ->
-            new CTUser(
+		return jdbcTemplate.query( "select * from events", (rs, rowNum) ->
+            new CTEvent(
+                    rs.getLong("event_id"),
                     rs.getLong("user_id"),
-                    rs.getString("user_nid"),
-                    rs.getString("user_name"),
-                    rs.getString("user_duid")
+                    rs.getFloat("event_lat"),
+                    rs.getFloat("event_lon"),
+                    rs.getFloat("event_alt"),
+                    rs.getLong("event_time")
             )
         );
 	}
 
 	@Override
-	public Long addUser(CTUser user) {
+	public Long addEvent(CTEvent event) {
 
 		try {
-			final String INSERT_SQL = "INSERT INTO users (user_nid, user_name, user_duid) VALUES (?, ?, ?)";
+			final String INSERT_SQL = "INSERT INTO events (user_id, event_lat, event_lon, event_alt) VALUES (?, ?, ?, ?)";
 			KeyHolder keyHolder = new GeneratedKeyHolder();
 			jdbcTemplate.update(
 			    new PreparedStatementCreator() {
 			        public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
 			            PreparedStatement ps =
-			                connection.prepareStatement(INSERT_SQL, new String[] {"user_id"});
-			            ps.setString(1, user.getUserNid());
-			            ps.setString(2, user.getUserName());
-			            ps.setString(3, user.getUserDuid());
+			                connection.prepareStatement(INSERT_SQL, new String[] {"event_id"});
+			            ps.setLong(1, event.getUserId());
+			            ps.setFloat(2, event.getLatitude());
+			            ps.setFloat(3, event.getLongitude());
+			            ps.setFloat(4, event.getAltitude());
 			            return ps;
 			        }
 			    },
