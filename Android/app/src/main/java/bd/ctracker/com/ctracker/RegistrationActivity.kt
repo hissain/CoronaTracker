@@ -1,4 +1,4 @@
-package bd.coronatracker.com.coronatracker
+package bd.ctracker.com.ctracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

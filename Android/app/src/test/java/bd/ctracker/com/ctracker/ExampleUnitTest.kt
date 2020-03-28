@@ -1,4 +1,4 @@
-package bd.coronatracker.com.coronatracker
+package bd.ctracker.com.ctracker
 
 import org.junit.Test
 
