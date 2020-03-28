@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		06117EC6107CCCD879DFBE47 /* Pods_CoronaTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8774F73EF21D39C6678D667E /* Pods_CoronaTrackerTests.framework */; };
 		14A57DEE242F49BC009A9235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57DED242F49BC009A9235 /* AppDelegate.swift */; };
 		14A57DF0242F49BC009A9235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57DEF242F49BC009A9235 /* SceneDelegate.swift */; };
-		14A57DF2242F49BC009A9235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57DF1242F49BC009A9235 /* ViewController.swift */; };
+		14A57DF2242F49BC009A9235 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57DF1242F49BC009A9235 /* RegistrationViewController.swift */; };
 		14A57DF5242F49BC009A9235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A57DF3242F49BC009A9235 /* Main.storyboard */; };
 		14A57DF7242F49BD009A9235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A57DF6242F49BD009A9235 /* Assets.xcassets */; };
 		14A57DFA242F49BD009A9235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A57DF8242F49BD009A9235 /* LaunchScreen.storyboard */; };
@@ -32,7 +32,7 @@
 		14A57DEA242F49BC009A9235 /* CoronaTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoronaTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A57DED242F49BC009A9235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14A57DEF242F49BC009A9235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		14A57DF1242F49BC009A9235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14A57DF1242F49BC009A9235 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		14A57DF4242F49BC009A9235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14A57DF6242F49BD009A9235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14A57DF9242F49BD009A9235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,13 +91,8 @@
 		14A57DEC242F49BC009A9235 /* CoronaTracker */ = {
 			isa = PBXGroup;
 			children = (
-				14A57DED242F49BC009A9235 /* AppDelegate.swift */,
-				14A57DEF242F49BC009A9235 /* SceneDelegate.swift */,
-				14A57DF1242F49BC009A9235 /* ViewController.swift */,
-				14A57DF3242F49BC009A9235 /* Main.storyboard */,
-				14A57DF6242F49BD009A9235 /* Assets.xcassets */,
-				14A57DF8242F49BD009A9235 /* LaunchScreen.storyboard */,
-				14A57DFB242F49BD009A9235 /* Info.plist */,
+				14A57E10242FAD51009A9235 /* Scenes */,
+				14A57E0F242FAD07009A9235 /* Support */,
 			);
 			path = CoronaTracker;
 			sourceTree = "<group>";
@@ -111,6 +106,27 @@
 			path = CoronaTrackerTests;
 			sourceTree = "<group>";
 		};
+		14A57E0F242FAD07009A9235 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				14A57DFB242F49BD009A9235 /* Info.plist */,
+				14A57DF6242F49BD009A9235 /* Assets.xcassets */,
+				14A57DF3242F49BC009A9235 /* Main.storyboard */,
+				14A57DF8242F49BD009A9235 /* LaunchScreen.storyboard */,
+				14A57DED242F49BC009A9235 /* AppDelegate.swift */,
+				14A57DEF242F49BC009A9235 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		14A57E10242FAD51009A9235 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				14A57DF1242F49BC009A9235 /* RegistrationViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		5334178A850B507114845D0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +135,6 @@
 				D5CC2D34E28E94B1080BDA64 /* Pods-CoronaTrackerTests.debug.xcconfig */,
 				36FF02488DD848740E1F7CC6 /* Pods-CoronaTrackerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -300,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A57DF2242F49BC009A9235 /* ViewController.swift in Sources */,
+				14A57DF2242F49BC009A9235 /* RegistrationViewController.swift in Sources */,
 				14A57DEE242F49BC009A9235 /* AppDelegate.swift in Sources */,
 				14A57DF0242F49BC009A9235 /* SceneDelegate.swift in Sources */,
 			);
@@ -465,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76KSWDPWX9;
-				INFOPLIST_FILE = CoronaTracker/Info.plist;
+				INFOPLIST_FILE = CoronaTracker/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76KSWDPWX9;
-				INFOPLIST_FILE = CoronaTracker/Info.plist;
+				INFOPLIST_FILE = CoronaTracker/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
