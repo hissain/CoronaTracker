@@ -13,7 +13,7 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.title = "Complete Registration"
+        self.title = "Complete Registration"
     }
 }
 
