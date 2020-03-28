@@ -11,7 +11,7 @@
         <!--Registration View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegistrationViewController" customModule="CoronaTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="BYZ-38-t0r" customClass="RegistrationViewController" customModule="CoronaTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +88,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4uR-fm-6wX"/>
+                    <connections>
+                        <outlet property="btnProblem" destination="gXB-nU-JDr" id="Pu6-JJ-fZ3"/>
+                        <outlet property="btnRegister" destination="cTf-Iq-OHg" id="5JP-Fx-r58"/>
+                        <outlet property="tfName" destination="Dwe-0Z-cS8" id="DjG-lU-g1E"/>
+                        <outlet property="tfNationalID" destination="Xfj-A7-l4Y" id="82I-JG-6lC"/>
+                        <outlet property="tfNumber" destination="AZL-VQ-pZC" id="wUL-Hj-r5z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
