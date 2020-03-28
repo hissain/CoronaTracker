@@ -15,6 +15,9 @@
 		14A57DF7242F49BD009A9235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A57DF6242F49BD009A9235 /* Assets.xcassets */; };
 		14A57DFA242F49BD009A9235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A57DF8242F49BD009A9235 /* LaunchScreen.storyboard */; };
 		14A57E05242F49BD009A9235 /* CoronaTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E04242F49BD009A9235 /* CoronaTrackerTests.swift */; };
+		14A57E14242FD5FA009A9235 /* CTUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E13242FD5FA009A9235 /* CTUserInfo.swift */; };
+		14A57E16242FD9BF009A9235 /* SecStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E15242FD9BF009A9235 /* SecStorageService.swift */; };
+		14A57E18242FD9DD009A9235 /* SecKeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E17242FD9DD009A9235 /* SecKeyService.swift */; };
 		D46E1E5D6FEA9752D6E7EC57 /* Pods_CoronaTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		14A57E00242F49BD009A9235 /* CoronaTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoronaTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A57E04242F49BD009A9235 /* CoronaTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaTrackerTests.swift; sourceTree = "<group>"; };
 		14A57E06242F49BD009A9235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A57E13242FD5FA009A9235 /* CTUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUserInfo.swift; sourceTree = "<group>"; };
+		14A57E15242FD9BF009A9235 /* SecStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecStorageService.swift; sourceTree = "<group>"; };
+		14A57E17242FD9DD009A9235 /* SecKeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecKeyService.swift; sourceTree = "<group>"; };
 		36FF02488DD848740E1F7CC6 /* Pods-CoronaTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CoronaTrackerTests/Pods-CoronaTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8774F73EF21D39C6678D667E /* Pods_CoronaTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +97,8 @@
 		14A57DEC242F49BC009A9235 /* CoronaTracker */ = {
 			isa = PBXGroup;
 			children = (
+				14A57E12242FD5E9009A9235 /* Models */,
+				14A57E11242FD5DD009A9235 /* Services */,
 				14A57E10242FAD51009A9235 /* Scenes */,
 				14A57E0F242FAD07009A9235 /* Support */,
 			);
@@ -125,6 +133,23 @@
 				14A57DF1242F49BC009A9235 /* RegistrationViewController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		14A57E11242FD5DD009A9235 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				14A57E17242FD9DD009A9235 /* SecKeyService.swift */,
+				14A57E15242FD9BF009A9235 /* SecStorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		14A57E12242FD5E9009A9235 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14A57E13242FD5FA009A9235 /* CTUserInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5334178A850B507114845D0B /* Pods */ = {
@@ -316,6 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A57DF2242F49BC009A9235 /* RegistrationViewController.swift in Sources */,
+				14A57E16242FD9BF009A9235 /* SecStorageService.swift in Sources */,
+				14A57E14242FD5FA009A9235 /* CTUserInfo.swift in Sources */,
+				14A57E18242FD9DD009A9235 /* SecKeyService.swift in Sources */,
 				14A57DEE242F49BC009A9235 /* AppDelegate.swift in Sources */,
 				14A57DF0242F49BC009A9235 /* SceneDelegate.swift in Sources */,
 			);

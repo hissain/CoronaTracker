@@ -21,6 +21,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
         self.title = "Complete Registration"
         self.registerObservers()
+
+        self.btnRegister.addTarget(self, action: #selector(signup(button:)), for: UIControl.Event.touchUpInside)
     }
 
     func registerObservers(){
@@ -32,6 +34,22 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+
+    @objc func signup(button: UIButton){
+
+        guard let name = tfName.text, !name.isEmpty else { return }
+        guard let number = tfName.text, !number.isEmpty else { return }
+        guard let nationalID = tfName.text, !nationalID.isEmpty else { return }
+
+        print("Proceed with name: \(name), number: \(number) and ID: \(nationalID)")
+
+        // Saving numbers to Preference/ User default
+
+        UserStoreData.name = name
+        UserStoreData.number = number
+        UserStoreData.nationalID = nationalID
+
     }
 
     @objc func keyboardWillAppear(notification: Notification){
