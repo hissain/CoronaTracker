@@ -16,6 +16,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnRegister: UIButton!
     @IBOutlet weak var btnProblem: UIButton!
 
+    let restApiService = RestApiService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +43,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         guard let name = tfName.text, !name.isEmpty else { return }
         guard let number = tfNumber.text, !number.isEmpty else { return }
         guard let nationalID = tfNationalID.text, !nationalID.isEmpty else { return }
+        let deviceId = UUID.init().uuidString
 
         print("Proceed with name: \(name), number: \(number) and ID: \(nationalID)")
 
@@ -49,7 +52,14 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         UserStoreData.name = name
         UserStoreData.number = number
         UserStoreData.nationalID = nationalID
-        UserStoreData.deviceID = UUID.init().uuidString
+        UserStoreData.deviceID = deviceId
+
+        let userInfo = CTUserInfo(name: name, phoneNumber: number, nationalID: nationalID, deviceUUID: deviceId)
+
+        restApiService.registerUser(userInfo: userInfo) { (result) in
+
+            print(result)
+        }
     }
 
     @objc func keyboardWillAppear(notification: Notification){
@@ -61,7 +71,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     }
 
     @objc func keyboardWillHide(notification: Notification){
-            self.view.transform = .identity
+        self.view.transform = .identity
     }
 }
 

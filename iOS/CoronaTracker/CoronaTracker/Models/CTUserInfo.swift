@@ -16,9 +16,10 @@ class CTUserInfo {
     var deviceUUID: String?
 
     init() {}
-    init(name: String, phoneNumber: String, nationalID: String){
+    init(name: String, phoneNumber: String, nationalID: String, deviceUUID: String){
         self.name = name
         self.phoneNumber = phoneNumber
         self.nationalID = nationalID
+        self.deviceUUID = deviceUUID
     }
 }
