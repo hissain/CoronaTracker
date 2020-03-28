@@ -23,6 +23,9 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 
 # System Design
 Overall system design is available here, 
+
+<img src="https://github.com/hissain/CoronaTracker/blob/master/architecture/SystemDesign.png" alt="Android Registration"/>
+
 https://github.com/hissain/CoronaTracker/blob/master/architecture/SystemDesign.png
 
 # How It Works?
@@ -38,6 +41,13 @@ We know most of the time we keep our smartphones with us even when we talk, walk
 1. Backlogs can be found here (https://github.com/hissain/CoronaTracker/projects) for Android, iOS and Server developers. You can pick one task from here and start working. This video (https://www.youtube.com/watch?v=e3bjQX9jIBk) might help to the fresh contributors.
 
 2. If you want to contribute to UI design side, we are waiting for a meaningful logo and thumbs for both Android and iOS application. Please request to us after you create logo/thumb sets.
+
+
+# Application Major Screens
+<img align="left" src="https://github.com/hissain/CoronaTracker/blob/master/architecture/Screenshots/Android/Screenshot_Registration.png" alt="Android Registration" width="300"/>
+
+<img align="center"  src="https://github.com/hissain/CoronaTracker/blob/master/architecture/Screenshots/Android/Screenshot_Registration.png" alt="Android Registration" width="300"/>
+
 
 # Contact
 Please feel free to send email to (hissain.khan@gmail.com), if you want to contribute to this project.
