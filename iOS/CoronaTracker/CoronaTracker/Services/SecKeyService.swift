@@ -17,4 +17,7 @@ struct UserStoreData {
 
     @EncryptedStringStorage(key: "kUserNationalID")
     static var nationalID: String
+
+    @EncryptedStringStorage(key: "kUserDeviceID")
+    static var deviceID: String
 }

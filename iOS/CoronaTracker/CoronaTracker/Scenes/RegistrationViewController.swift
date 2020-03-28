@@ -39,8 +39,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @objc func signup(button: UIButton){
 
         guard let name = tfName.text, !name.isEmpty else { return }
-        guard let number = tfName.text, !number.isEmpty else { return }
-        guard let nationalID = tfName.text, !nationalID.isEmpty else { return }
+        guard let number = tfNumber.text, !number.isEmpty else { return }
+        guard let nationalID = tfNationalID.text, !nationalID.isEmpty else { return }
 
         print("Proceed with name: \(name), number: \(number) and ID: \(nationalID)")
 
@@ -49,23 +49,19 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         UserStoreData.name = name
         UserStoreData.number = number
         UserStoreData.nationalID = nationalID
-
+        UserStoreData.deviceID = UUID.init().uuidString
     }
 
     @objc func keyboardWillAppear(notification: Notification){
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y -= keyboardHeight/2
+            self.view.transform = CGAffineTransform(translationX: 0, y: -keyboardHeight/2)
         }
     }
 
     @objc func keyboardWillHide(notification: Notification){
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y += keyboardHeight/2
-        }
+            self.view.transform = .identity
     }
 }
 
