@@ -21,7 +21,8 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 
 ![Conceptual Illutration](https://github.com/hissain/CoronaTracker/blob/master/architecture/ctracker-datascheme.png)
 
-#System Design
+# System Design
+Overall system design is available here, 
 https://github.com/hissain/CoronaTracker/blob/master/architecture/SystemDesign.png
 
 # How It Works?
@@ -32,6 +33,11 @@ We know most of the time we keep our smartphones with us even when we talk, walk
 2. User Privacy - User might not agree to share their locations - However government can create awareness with mobile operations, news media, televisions, gov websites for the sake of humanity. Between health vs. privacy, nobody want to loose health. Moreover, only government will have read access to citizens close contacts only (not all location info) to avoid social chaos and privacy issue.
 3. Computation/Storage - Storage as a part of infrastructure will be a challenge. However, we can only keep raw data for last couple of days i.e. ( 14 days data ) into server so that the storage will be linear and easily scalable. Computation can be quickly outsourced to IAS provider, like Amazon/GoogleCloud etc.
 4. GPS Inaccuracy - Initial proposal is to use GPS which has poor accuracy, around ~3 meters at best. That might not be feasible to detect close contacts for covid-19. However, if we can consider Bluetooth and NFC along with GPS, accurate information can be archived after creating an appropriate Algorithm.
+
+# Contributors Guidelines
+1. Backlogs can be found here (https://github.com/hissain/CoronaTracker/projects) for Android, iOS and Server developers. You can pick one task from here and start working. This video (https://www.youtube.com/watch?v=e3bjQX9jIBk) might help to the fresh contributors.
+
+2. If you want to contribute to UI design side, we are waiting for a meaningful logo and thumbs for both Android and iOS application. Please request to us after you create logo/thumb sets.
 
 # Contact
 Please feel free to send email to (hissain.khan@gmail.com), if you want to contribute to this project.
