@@ -42,6 +42,8 @@ We know most of the time we keep our smartphones with us even when we talk, walk
 
 2. If you want to contribute to UI design side, we are waiting for a meaningful logo and thumbs for both Android and iOS application. Please request to us after you create logo/thumb sets.
 
+3. We are also looking for Could EC2 and RDS instance. Anyone can also contribute to this porject by sharing could services for making the POC successful.
+
 
 # Application Major Screens
 <img align="left" src="https://github.com/hissain/CoronaTracker/blob/master/architecture/Screenshots/Android/Screenshot_Registration.png" alt="Android Registration" width="300"/>
