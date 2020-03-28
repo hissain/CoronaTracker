@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:background="#1785df">
+
+    <ImageView
+
+            android:src="@drawable/fight_covid_19"
+            android:layout_width="match_parent"
+            android:scaleType="centerInside"
+            android:layout_height="210dp"
+            android:id="@+id/iv_logo"
+            android:layout_marginBottom="30dp"/>
+
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/et_name"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="5dp"
+            android:background="#fff"
+            android:hint="Enter Name" />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/et_umber"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="5dp"
+            android:background="#fff"
+            android:hint="Enter Phone Number" />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:id="@+id/et_nid"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="5dp"
+            android:background="#fff"
+            android:hint="Enter NID (National ID)" />
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_reg"
+            android:text="Register"
+            android:background="#F1DB12"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/tv_problem"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="Facing problem? visit here"/>
+</LinearLayout>
