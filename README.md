@@ -1,5 +1,5 @@
 # CoronaTracker
-This project is to build application to track the close contacts within last 14 days for a covid-19 positive patient 
+This project is to build application to track the close contacts within last 14 days for a covid-19 positive patient
 
 # Background
 Humanity is in crisis due to covid-19 global outbreak which is already declared as a pandemic. This is high time we need to get the best of our technology to solve parts of this global crisis. One of the most difficult challenges for any government of the affected counties is to flatten the curve of infection. Early detection of already affected patients is the most important part to flatten the curve. When a patient is identified as covid-19 positive, government is trying to obtain close contacts information of the patient through manual processes like, by asking to the friends and family of the affected and so on. However, this approach has many limitations in terms of information accuracy, information retrieval delay etc. due to mostly,
@@ -21,8 +21,11 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 
 ![Conceptual Illutration](https://github.com/hissain/CoronaTracker/blob/master/architecture/ctracker-datascheme.png)
 
+#System Design
+https://github.com/hissain/CoronaTracker/blob/master/architecture/SystemDesign.png
+
 # How It Works?
-We know most of the time we keep our smartphones with us even when we talk, walk, gather, hangout, dine, attend festivals and so on. If CoronaTracker app is ideally installed in the smartphones of all the citizens of the country, close contacts information of a covid-19 positive patient for a certain duration (i.e. more than 2/3 ~ 5/10 mins, configurable) can be easily detected from combination of GPS, Bluetooth and NFC data and logged into server. Thus, if one of the citizens is diagnosed as covid-19 positive, government can find the full list of close contacts with other detail information (i.e. contact durations, distances, times and places). That would of course generate very accurate information to identify the candidates eligible to be quarantined and further immediate testings. 
+We know most of the time we keep our smartphones with us even when we talk, walk, gather, hangout, dine, attend festivals and so on. If CoronaTracker app is ideally installed in the smartphones of all the citizens of the country, close contacts information of a covid-19 positive patient for a certain duration (i.e. more than 2/3 ~ 5/10 mins, configurable) can be easily detected from combination of GPS, Bluetooth and NFC data and logged into server. Thus, if one of the citizens is diagnosed as covid-19 positive, government can find the full list of close contacts with other detail information (i.e. contact durations, distances, times and places). That would of course generate very accurate information to identify the candidates eligible to be quarantined and further immediate testings.
 
 # Core Challenges
 1. App Installation - many citizen will have no smartphone hence they will be out of this project. However, that would not be issue because at least a large part of the citizens can be covered with this project.
@@ -32,5 +35,3 @@ We know most of the time we keep our smartphones with us even when we talk, walk
 
 # Contact
 Please feel free to send email to (hissain.khan@gmail.com), if you want to contribute to this project.
-
-
