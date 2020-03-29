@@ -16,17 +16,10 @@ class CTUserInfo {
     var deviceUUID: String?
 
     init() {}
-<<<<<<< HEAD
     init(name: String, phoneNumber: String, nationalID: String, deviceUUID: String){
         self.name = name
         self.phoneNumber = phoneNumber
         self.nationalID = nationalID
         self.deviceUUID = deviceUUID
-=======
-    init(name: String, phoneNumber: String, nationalID: String){
-        self.name = name
-        self.phoneNumber = phoneNumber
-        self.nationalID = nationalID
->>>>>>> Merge from remote.
     }
 }

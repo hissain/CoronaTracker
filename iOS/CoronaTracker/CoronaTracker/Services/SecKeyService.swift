@@ -17,10 +17,7 @@ struct UserStoreData {
 
     @EncryptedStringStorage(key: "kUserNationalID")
     static var nationalID: String
-<<<<<<< HEAD
 
     @EncryptedStringStorage(key: "kUserDeviceID")
     static var deviceID: String
-=======
->>>>>>> Merge from remote.
 }
