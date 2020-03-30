@@ -17,6 +17,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnProblem: UIButton!
 
     let restApiService = RestApiService()
+    let locationService = LocationService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +26,13 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         self.registerObservers()
 
         self.btnRegister.addTarget(self, action: #selector(signup(button:)), for: UIControl.Event.touchUpInside)
+        self.locationService.requestPermission()
     }
 
     func registerObservers(){
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -26,12 +26,12 @@ class CTEventInfo {
 }
 
 class CTLocation {
-    var latitude: Float?
-    var longitude: Float?
-    var altitude: Float?
+    var latitude: Double?
+    var longitude: Double?
+    var altitude: Double?
 
     init() {}
-    init(lat: Float, lon: Float, alt: Float){
+    init(lat: Double, lon: Double, alt: Double){
         self.latitude = lat
         self.longitude = lon
         self.altitude = alt
