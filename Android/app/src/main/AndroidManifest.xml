@@ -32,7 +32,7 @@
                 android:value="@string/google_maps_key"/>
 
         <activity
-                android:name="bd.ctracker.com.ctracker.RegistrationActivity"
+                android:name="bd.ctracker.com.ctracker.activity.RegistrationActivity"
                 android:windowSoftInputMode="adjustResize"
                 android:label="@string/title_activity_maps">
             <intent-filter>

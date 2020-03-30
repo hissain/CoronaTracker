@@ -1,4 +1,4 @@
-package bd.ctracker.com.ctracker
+package bd.ctracker.com.ctracker.activity
 
 import android.app.Activity
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import bd.ctracker.com.ctracker.R
 
 
 class RegistrationActivity : AppCompatActivity() {
