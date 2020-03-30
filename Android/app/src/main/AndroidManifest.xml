@@ -33,6 +33,7 @@
 
         <activity
                 android:name="bd.ctracker.com.ctracker.RegistrationActivity"
+                android:windowSoftInputMode="adjustResize"
                 android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
