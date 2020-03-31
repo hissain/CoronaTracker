@@ -100,6 +100,33 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
+        <!--Tracking View Controller-->
+        <scene sceneID="X6Z-Mn-jAx">
+            <objects>
+                <viewController storyboardIdentifier="TrackingViewController" id="Iq1-1M-bEn" customClass="TrackingViewController" customModule="CoronaTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjD-5v-FSc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App State : TRACKING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epk-Xj-x4E">
+                                <rect key="frame" x="46.5" y="428.5" width="321.5" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38314184769999998" green="0.67790097589999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="epk-Xj-x4E" firstAttribute="centerY" secondItem="KjD-5v-FSc" secondAttribute="centerY" id="Abi-e1-aKR"/>
+                            <constraint firstItem="epk-Xj-x4E" firstAttribute="centerX" secondItem="KjD-5v-FSc" secondAttribute="centerX" id="eCK-Ne-YTw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mea-L3-w5M"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxf-Yj-zhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030" y="113"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pVk-WO-ffw">
             <objects>

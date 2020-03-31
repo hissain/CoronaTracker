@@ -11,14 +11,16 @@ import CoreLocation
 
 class RestRequestService {
 
-    func addUser(userInfo: CTUserInfo) {
+    func addUser(userInfo: CTUserInfo, onResult: @escaping (Bool) -> Void) {
         let apiService = RestApiService()
         apiService.registerUser(userInfo: userInfo) { (result) in
             if let user = result, let id = user.id {
                 print("Success sending to server, user: \(user)")
                 UserStoreData.userID = String(id)
+                onResult(true)
             }else {
                 print("Failure sending userInfo to server")
+                onResult(false)
             }
         }
     }

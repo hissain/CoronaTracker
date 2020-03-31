@@ -18,8 +18,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnProblem: UIButton!
 
     let restApiService = RestApiService()
-    let locationService = LocationService()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +26,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         self.registerObservers()
 
         self.btnRegister.addTarget(self, action: #selector(signup(button:)), for: UIControl.Event.touchUpInside)
-        self.locationService.requestPermission()
     }
 
     func registerObservers(){
@@ -57,7 +55,15 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         UserStoreData.deviceID = deviceId
 
         let userInfo = CTUserInfo(name: name, phoneNumber: number, nationalID: nationalID, deviceUUID: deviceId)
-        RestRequestService().addUser(userInfo: userInfo)
+        RestRequestService().addUser(userInfo: userInfo) { (result) in
+            if result {
+                DispatchQueue.main.async {
+                    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "TrackingViewController")
+                    self.navigationController?.pushViewController(controller, animated: true)
+                }
+            }
+        }
 
         // Test Code
 //        let apiService = RestApiService()

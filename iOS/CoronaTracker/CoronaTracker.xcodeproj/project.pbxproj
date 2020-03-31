@@ -23,6 +23,7 @@
 		14A57E5124327982009A9235 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E5024327982009A9235 /* LocationService.swift */; };
 		14A57E542433C859009A9235 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E532433C859009A9235 /* Constants.swift */; };
 		14A57E562433DC93009A9235 /* RestRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E552433DC93009A9235 /* RestRequestService.swift */; };
+		14A57E582433F12E009A9235 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E572433F12E009A9235 /* TrackingViewController.swift */; };
 		D46E1E5D6FEA9752D6E7EC57 /* Pods_CoronaTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		14A57E5024327982009A9235 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		14A57E532433C859009A9235 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		14A57E552433DC93009A9235 /* RestRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestService.swift; sourceTree = "<group>"; };
+		14A57E572433F12E009A9235 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		36FF02488DD848740E1F7CC6 /* Pods-CoronaTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CoronaTrackerTests/Pods-CoronaTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8774F73EF21D39C6678D667E /* Pods_CoronaTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				14A57DF1242F49BC009A9235 /* RegistrationViewController.swift */,
+				14A57E572433F12E009A9235 /* TrackingViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				14A57E562433DC93009A9235 /* RestRequestService.swift in Sources */,
 				14A57E18242FD9DD009A9235 /* SecKeyService.swift in Sources */,
 				14A57DEE242F49BC009A9235 /* AppDelegate.swift in Sources */,
+				14A57E582433F12E009A9235 /* TrackingViewController.swift in Sources */,
 				14A57E5124327982009A9235 /* LocationService.swift in Sources */,
 				14A57DF0242F49BC009A9235 /* SceneDelegate.swift in Sources */,
 			);

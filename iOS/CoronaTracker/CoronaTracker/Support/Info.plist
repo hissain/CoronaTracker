@@ -58,6 +58,8 @@
 	<array>
 		<string>location</string>
 	</array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We want to help you find your location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We want to help you find your location</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
