@@ -11,7 +11,7 @@ import Alamofire
 
 class RestApiService {
 
-    func registerUser(userInfo: CTUserInfo, completionBlock: @escaping (Bool) -> Void ){
+    func registerUser(userInfo: CTUserInfo, completionBlock: @escaping (CTUserInfo?) -> Void ){
 
         var request = URLRequest(url: URL.init(string: "http://localhost:8080/users")!)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -31,20 +31,23 @@ class RestApiService {
 
         AF.request(request)
             .validate()
-            .responseData { (response) in
+            .responseJSON { (response) in
                 switch response.result {
-                case .success(let value):
-                    print(value)
-                    completionBlock(true)
+                case .success( _):
+                    var addedUser: CTUserInfo? = nil
+                    if let data = response.data {
+                        addedUser = try? JSONDecoder().decode(CTUserInfo.self, from: data)
+                    }
+                    completionBlock(addedUser)
                 case .failure(let error):
                     print("Error: \(error)")
-                    completionBlock(false)
+                    completionBlock(nil)
                 }
         }
     }
 
 
-    func registerEvent(eventInfo: CTEventInfo, completionBlock: @escaping (Bool) -> Void ){
+    func registerEvent(eventInfo: CTEventInfo, completionBlock: @escaping (CTEventInfo?) -> Void ){
 
         var request = URLRequest(url: URL.init(string: "http://localhost:8080/events")!)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -63,14 +66,17 @@ class RestApiService {
 
         AF.request(request)
             .validate()
-            .responseData { (response) in
+            .responseJSON { (response) in
                 switch response.result {
-                case .success(let value):
-                    print(value)
-                    completionBlock(true)
+                case .success( _):
+                    var addedEvent: CTEventInfo? = nil
+                    if let data = response.data {
+                        addedEvent = try? JSONDecoder().decode(CTEventInfo.self, from: data)
+                    }
+                    completionBlock(addedEvent)
                 case .failure(let error):
                     print("Error: \(error)")
-                    completionBlock(false)
+                    completionBlock(nil)
                 }
         }
     }

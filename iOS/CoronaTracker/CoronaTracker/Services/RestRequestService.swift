@@ -14,11 +14,11 @@ class RestRequestService {
     func addUser(userInfo: CTUserInfo) {
         let apiService = RestApiService()
         apiService.registerUser(userInfo: userInfo) { (result) in
-            if result {
-                print("Success sending to server, user: \(userInfo)")
-                UserStoreData.registered = RegistrationStatus.Registered.rawValue
+            if let user = result, let id = user.id {
+                print("Success sending to server, user: \(user)")
+                UserStoreData.userID = String(id)
             }else {
-                print("Failure sending to server, user: \(userInfo)")
+                print("Failure sending userInfo to server")
             }
         }
     }
@@ -31,17 +31,14 @@ class RestRequestService {
         event.altitude = location.altitude
         event.latitude = location.coordinate.latitude
         event.longitude = location.coordinate.longitude
-        event.nationalID = UserStoreData.nationalID
-        event.deviceUUID = UserStoreData.deviceID
-        event.number = UserStoreData.number
+        event.userId = Int(UserStoreData.userID)
 
         apiService.registerEvent(eventInfo: event) { (result) in
-            if result {
-                print("Success sending to server, location: \(location)")
+            if let event = result, let id = event.eventId {
+                print("Success sending to server, event id: \(id)")
             }else {
-                print("Filure sending to server, location: \(location)")
+                print("Filure sending event to server")
             }
         }
     }
 }
-

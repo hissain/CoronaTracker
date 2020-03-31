@@ -21,6 +21,6 @@ struct UserStoreData {
     @EncryptedStringStorage(key: "kUserDeviceID")
     static var deviceID: String
 
-    @EncryptedStringStorage(key: "kUserRegistered")
-    static var registered: String
+    @EncryptedStringStorage(key: "kUserID")
+    static var userID: String
 }

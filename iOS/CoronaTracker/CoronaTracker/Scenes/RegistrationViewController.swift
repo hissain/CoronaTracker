@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
@@ -57,6 +58,23 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
         let userInfo = CTUserInfo(name: name, phoneNumber: number, nationalID: nationalID, deviceUUID: deviceId)
         RestRequestService().addUser(userInfo: userInfo)
+
+        // Test Code
+//        let apiService = RestApiService()
+//        let event = CTEventInfo()
+//        event.altitude = 10.101
+//        event.latitude = 97.202
+//        event.longitude = -79.305
+//        event.userId = 1004
+//
+//        apiService.registerEvent(eventInfo: event) { (result) in
+//            if let e = result, let id = e.eventId {
+//                print("Success sending to server, event id: \(id)")
+//            }else {
+//                print("Filure sending to server, event")
+//            }
+//        }
+        
     }
 
     @objc func keyboardWillAppear(notification: Notification){
