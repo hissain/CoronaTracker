@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Nr0-bF-uVy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZL-VQ-pZC" userLabel="tf_number">
                                 <rect key="frame" x="15" y="473" width="384" height="50"/>
@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Rd9-3F-MAF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your NID (National ID)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xfj-A7-l4Y" userLabel="tf_nid">
                                 <rect key="frame" x="15" y="538" width="384" height="50"/>
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Tj3-kv-5O7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTf-Iq-OHg" userLabel="btn_register">
                                 <rect key="frame" x="15" y="638" width="384" height="50"/>

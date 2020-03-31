@@ -51,25 +51,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
 
         if let location = locations.last {
             print("New location is \(location)")
-
-            let apiService = RestApiService()
-            let event = CTEventInfo()
-            event.location = CTLocation()
-            event.location?.altitude = location.altitude
-            event.location?.latitude = location.coordinate.latitude
-            event.location?.longitude = location.coordinate.longitude
-            event.nationalID = UserStoreData.nationalID
-            event.deviceUUID = UserStoreData.deviceID
-            event.number = UserStoreData.number
-
-            apiService.registerEvent(eventInfo: event) { (result) in
-
-                if result {
-                    print("Success sending to server, location: \(location)")
-                }else {
-                    print("Filure sending to server, location: \(location)")
-                }
-            }
+            RestRequestService().addEvent(location: location)
         }
     }
 }

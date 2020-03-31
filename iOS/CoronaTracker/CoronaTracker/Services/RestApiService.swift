@@ -13,8 +13,25 @@ class RestApiService {
 
     func registerUser(userInfo: CTUserInfo, completionBlock: @escaping (Bool) -> Void ){
 
-        AF.request("http://api.server.com/users")
-            .responseJSON { (response) in
+        var request = URLRequest(url: URL.init(string: "http://localhost:8080/users")!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(userInfo)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            print("Request body: \(String(describing: jsonString))")
+            request.httpBody = jsonData
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+
+
+        AF.request(request)
+            .validate()
+            .responseData { (response) in
                 switch response.result {
                 case .success(let value):
                     print(value)
@@ -29,8 +46,24 @@ class RestApiService {
 
     func registerEvent(eventInfo: CTEventInfo, completionBlock: @escaping (Bool) -> Void ){
 
-        AF.request("http://api.server.com/events")
-            .responseJSON { (response) in
+        var request = URLRequest(url: URL.init(string: "http://localhost:8080/events")!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(eventInfo)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            print("Request body: \(String(describing: jsonString))")
+            request.httpBody = jsonData
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+
+        AF.request(request)
+            .validate()
+            .responseData { (response) in
                 switch response.result {
                 case .success(let value):
                     print(value)

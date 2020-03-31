@@ -27,6 +27,7 @@ public class JdbcUserRepository implements UserRepository {
             new CTUser(
                     rs.getLong("user_id"),
                     rs.getString("user_nid"),
+                    rs.getString("user_phone_number"),
                     rs.getString("user_name"),
                     rs.getString("user_duid")
             )
@@ -37,7 +38,7 @@ public class JdbcUserRepository implements UserRepository {
 	public Long addUser(CTUser user) {
 
 		try {
-			final String INSERT_SQL = "INSERT INTO users (user_nid, user_name, user_duid) VALUES (?, ?, ?)";
+			final String INSERT_SQL = "INSERT INTO users (user_nid, user_phone_number, user_name, user_duid) VALUES (?, ?, ?, ?)";
 			KeyHolder keyHolder = new GeneratedKeyHolder();
 			jdbcTemplate.update(
 			    new PreparedStatementCreator() {
@@ -45,8 +46,9 @@ public class JdbcUserRepository implements UserRepository {
 			            PreparedStatement ps =
 			                connection.prepareStatement(INSERT_SQL, new String[] {"user_id"});
 			            ps.setString(1, user.getUserNid());
-			            ps.setString(2, user.getUserName());
-			            ps.setString(3, user.getUserDuid());
+			            ps.setString(2, user.getUserPhoneNumber());
+			            ps.setString(3, user.getUserName());
+			            ps.setString(4, user.getUserDuid());
 			            return ps;
 			        }
 			    },

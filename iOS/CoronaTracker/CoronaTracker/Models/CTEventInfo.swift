@@ -8,30 +8,24 @@
 
 import Foundation
 
-class CTEventInfo {
+class CTEventInfo: Codable {
 
     var number: String?
     var nationalID: String?
     var deviceUUID: String?
-
-    var location: CTLocation?
-
-    init() {}
-    init(number: String, nationalID: String, deviceID: String, location: CTLocation) {
-        self.number = number
-        self.nationalID = nationalID
-        self.deviceUUID = deviceID
-        self.location = location
-    }
-}
-
-class CTLocation {
     var latitude: Double?
     var longitude: Double?
     var altitude: Double?
 
+    private enum CodingKeys : String, CodingKey {
+        case number, nationalID, deviceUUID, latitude, longitude, altitude
+    }
+
     init() {}
-    init(lat: Double, lon: Double, alt: Double){
+    init(number: String, nationalID: String, deviceID: String, lat: Double, lon: Double, alt: Double) {
+        self.number = number
+        self.nationalID = nationalID
+        self.deviceUUID = deviceID
         self.latitude = lat
         self.longitude = lon
         self.altitude = alt

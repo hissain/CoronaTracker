@@ -56,11 +56,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         UserStoreData.deviceID = deviceId
 
         let userInfo = CTUserInfo(name: name, phoneNumber: number, nationalID: nationalID, deviceUUID: deviceId)
-
-        restApiService.registerUser(userInfo: userInfo) { (result) in
-
-            print(result)
-        }
+        RestRequestService().addUser(userInfo: userInfo)
     }
 
     @objc func keyboardWillAppear(notification: Notification){

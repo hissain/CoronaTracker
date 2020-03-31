@@ -5,20 +5,23 @@ public class CTUser {
 
 	private Long userId;
 	private String userNid;
+	private String userPhoneNumber;
 	private String userName;
 	private String userDuid;
 
 	public CTUser() {}
-	public CTUser(String userNid, String userName, String userDuid) {
+	public CTUser(String userNid, String userName, String userPhoneNumber, String userDuid) {
 		super();
 		this.userNid = userNid;
+		this.userPhoneNumber = userPhoneNumber;
 		this.userName = userName;
 		this.userDuid = userDuid;
 	}
-	public CTUser(Long userId, String userNid, String userName, String userDuid) {
+	public CTUser(Long userId, String userNid, String userPhoneNumber, String userName, String userDuid) {
 		super();
 		this.userId = userId;
 		this.userNid = userNid;
+		this.userPhoneNumber = userPhoneNumber;
 		this.userName = userName;
 		this.userDuid = userDuid;
 	}
@@ -53,5 +56,11 @@ public class CTUser {
 
 	public void setUserDuid(String userDuid) {
 		this.userDuid = userDuid;
+	}
+	public String getUserPhoneNumber() {
+		return userPhoneNumber;
+	}
+	public void setUserPhoneNumber(String userPhoneNumber) {
+		this.userPhoneNumber = userPhoneNumber;
 	}
 }
