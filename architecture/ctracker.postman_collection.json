@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "b8310d6b-1fc0-4702-ab49-4f6b13ceeadf",
+		"name": "ctracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userNid\": \"NID0001\",\n    \"userPhoneNumber\": \"12345\",\n    \"userName\": \"Alex\",\n    \"userDuid\": \"3EBD4E7D-33AA-41C4-AE45-20886957E639\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Adding new users"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/events",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1001,\n    \"latitude\": 107.1009,\n    \"longitude\": -105.1009,\n    \"altitude\": 20.1022\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/events",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events"
+					]
+				},
+				"description": "Adding new event"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/fetch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 15,\n    \"maxContactDistance\": 1,\n    \"maxDateCount\": 14,\n    \"accessToken\": \"1234\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/fetch",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fetch"
+					]
+				},
+				"description": "Fetching candidates for given patient ID and params"
+			},
+			"response": []
+		}
+	]
+}
