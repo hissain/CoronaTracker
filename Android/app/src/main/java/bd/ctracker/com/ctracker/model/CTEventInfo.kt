@@ -1,12 +1,20 @@
 package bd.ctracker.com.ctracker.model
 
+import com.google.gson.annotations.SerializedName
 
-data class CTLocation(val latitude: Float,
-                      val longitude: Float,
-                      val altitude: Float)
+data class CTEventInfo(
+    @SerializedName("eventId")
+    val eventId: String,
 
-data class CTEventInfo(val phoneNumber: String,
-                       val nationalID: String,
-                       val deviceUUID: String,
-                       val location: CTLocation
+    @SerializedName("userId")
+    val userId: String,
+
+    @SerializedName("latitude")
+    val latitude: Double,
+
+    @SerializedName("longitude")
+    val longitude: Double,
+
+    @SerializedName("altitude")
+    val altitude: Double
 )

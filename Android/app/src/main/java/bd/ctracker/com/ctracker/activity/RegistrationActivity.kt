@@ -14,12 +14,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.work.*
 import bd.ctracker.com.ctracker.R
+import bd.ctracker.com.ctracker.model.CTUserInfo
+import bd.ctracker.com.ctracker.repository.RestApiService
 import bd.ctracker.com.ctracker.service.ContactService
 import bd.ctracker.com.ctracker.utility.LOCATION_WORK_TAG
 import bd.ctracker.com.ctracker.worker.TrackContactWorker
 import kotlinx.android.synthetic.main.activity_registration.*
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
+import android.provider.Settings.Secure;
 
 private const val MY_PERMISSIONS_REQUEST_LOCATION = 1000
 
@@ -61,6 +64,24 @@ class RegistrationActivity : AppCompatActivity() {
 
 
         btn_reg.setOnClickListener {
+
+            val name = findViewById<EditText>(R.id.et_name).text.toString()
+            val number = findViewById<EditText>(R.id.et_number).text.toString()
+            val nid = findViewById<EditText>(R.id.et_nid).text.toString()
+
+            val duid = Secure.getString(this.contentResolver, Secure.ANDROID_ID)
+
+            if (name.isBlank() || number.isBlank() || nid.isBlank()){
+                print("Invalid input. Please check and enter valid name, number and nid")
+                return@setOnClickListener
+            }
+
+            val apiService = RestApiService()
+
+            var userInfo = CTUserInfo(id = null, name = name, phoneNumber = number, nationalID = nid, userDuid = duid)
+
+            apiService.addUser(userInfo)
+
             if (ActivityCompat.checkSelfPermission(
                     this,
                     Manifest.permission.ACCESS_FINE_LOCATION

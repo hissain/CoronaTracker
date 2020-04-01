@@ -14,7 +14,7 @@ object ServiceBuilder {
     private val client = OkHttpClient.Builder().build()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://api.server.com/")
+        .baseUrl("http://localhost:8080/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()
@@ -35,14 +35,17 @@ class RestApiService {
 
                 override fun onFailure(call: Call<ServerResponse>, t: Throwable) {
                     // failure
+                    print("Failed")
                 }
 
                 override fun onResponse( call: Call<ServerResponse>, response: Response<ServerResponse>) {
 
                     if (response.code() == 201) {
                         // user added
+                        print("Success")
                     } else{
                         //user could not be added
+                        print("Failed")
                     }
                 }
             }

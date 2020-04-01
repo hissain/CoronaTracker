@@ -28,7 +28,7 @@
             android:hint="Enter Name" />
 
     <EditText
-            android:id="@+id/et_umber"
+            android:id="@+id/et_number"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
