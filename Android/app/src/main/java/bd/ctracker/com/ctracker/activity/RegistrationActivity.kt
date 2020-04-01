@@ -1,6 +1,7 @@
 package bd.ctracker.com.ctracker.activity
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings.Secure
 import android.view.View
@@ -13,6 +14,7 @@ import bd.ctracker.com.ctracker.R
 import bd.ctracker.com.ctracker.model.CTUserInfo
 import bd.ctracker.com.ctracker.repository.RestApiService
 import kotlinx.android.synthetic.main.activity_registration.*
+import timber.log.Timber
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -64,7 +66,17 @@ class RegistrationActivity : AppCompatActivity() {
             val apiService = RestApiService()
             val userInfo = CTUserInfo(id = null, name = name, phoneNumber = number, nationalID = nid, userDuid = duid)
 
-            apiService.addUser(userInfo)
+            apiService.addUser(userInfo) {
+
+                if (it != null) {
+
+                    val intent = Intent(this, TrackingActivity::class.java)
+                    this.startActivity(intent)
+
+                } else {
+                    Timber.d("Error registering new user")
+                }
+            }
         }
     }
 }

@@ -28,17 +28,20 @@ object ServiceBuilder {
 
 class RestApiService {
 
-    fun addUser(userData: CTUserInfo){
+    fun addUser(userData: CTUserInfo, onResult: (CTUserInfo?) -> Unit){
 
         val retrofit = ServiceBuilder.buildService(RestApi::class.java)
 
         retrofit.addUser(userData).enqueue(
-            object : Callback<ResponseBody> {
-                override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+            object : Callback<CTUserInfo> {
+                override fun onFailure(call: Call<CTUserInfo>, t: Throwable) {
                     Timber.d("Failure: %s", t.stackTrace)
                 }
-                override fun onResponse( call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                override fun onResponse( call: Call<CTUserInfo>, response: Response<CTUserInfo>) {
                     Timber.d("Success with response code: %s", response.code())
+                    val addedUser = response.body()
+                    Timber.d("Added user: %s", addedUser)
+                    onResult(addedUser)
                 }
             }
         )

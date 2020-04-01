@@ -41,13 +41,15 @@
         <activity
                 android:name="bd.ctracker.com.ctracker.activity.RegistrationActivity"
                 android:windowSoftInputMode="adjustResize"
-                android:label="@string/title_activity_maps">
+                android:label="@string/title_activity_reg">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.TrackingActivity"
+                android:label="@string/title_activity_track" />
     </application>
 
 </manifest>

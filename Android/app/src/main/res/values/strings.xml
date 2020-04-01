@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CoronaTracker</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_reg">Registration</string>
+    <string name="title_activity_track">Tracking</string>
 </resources>

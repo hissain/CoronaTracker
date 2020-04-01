@@ -34,8 +34,8 @@ class TrackingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTitle("Complete Registation")
-        setContentView(R.layout.activity_registration)
+        title = "Tracking"
+        setContentView(R.layout.activity_tracker)
 
         if (ActivityCompat.checkSelfPermission(
                 this,

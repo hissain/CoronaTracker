@@ -12,7 +12,7 @@ interface RestApi {
 
     @Headers("Content-Type: application/json")
     @POST("users")
-    fun addUser(@Body userData: CTUserInfo): Call<ResponseBody>
+    fun addUser(@Body userData: CTUserInfo): Call<CTUserInfo>
 
     @Headers("Content-Type: application/json")
     @POST("events")
