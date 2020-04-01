@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class CTUserInfo(
 
     @SerializedName("userId")
-    val id: String?,
+    val id: Int?,
 
     @SerializedName("userName")
     val name: String?,

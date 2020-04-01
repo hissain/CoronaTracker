@@ -5,7 +5,11 @@ import android.content.Intent
 import android.os.IBinder
 import android.widget.Toast
 import androidx.work.WorkManager
+import bd.ctracker.com.ctracker.BaseApplication
+import bd.ctracker.com.ctracker.model.CTEventInfo
+import bd.ctracker.com.ctracker.repository.RestApiService
 import bd.ctracker.com.ctracker.utility.LOCATION_WORK_TAG
+import bd.ctracker.com.ctracker.utility.PreferenceKeys
 import com.google.android.gms.location.*
 import kotlinx.coroutines.*
 import timber.log.Timber
@@ -43,6 +47,31 @@ class ContactService : Service() {
                         }
                         Timber.d("Getting contact details and stored into DB")
 
+                        val id = BaseApplication.preference().getInt(PreferenceKeys.userID, -1)
+
+                        if (id != -1) { // registered valid user
+
+                            val eventInfo = CTEventInfo(
+                                null,
+                                userId = id,
+                                latitude = location.latitude,
+                                longitude = location.longitude,
+                                altitude = location.altitude
+                            )
+
+                            RestApiService().addEvent(eventInfo, onResult = {
+
+                                if (it != null) {
+                                    Timber.d(
+                                        "Event added for user %s, event id: %s",
+                                        id,
+                                        it.eventId
+                                    )
+                                } else {
+                                    Timber.e("Event could not be added. Need to check at Server side")
+                                }
+                            })
+                        }
                     }
                 }
             }

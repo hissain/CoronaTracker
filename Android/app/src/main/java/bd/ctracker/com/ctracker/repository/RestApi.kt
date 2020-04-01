@@ -16,5 +16,5 @@ interface RestApi {
 
     @Headers("Content-Type: application/json")
     @POST("events")
-    fun addEvent(@Body eventData: CTEventInfo): Call<ResponseBody>
+    fun addEvent(@Body eventData: CTEventInfo): Call<CTEventInfo>
 }

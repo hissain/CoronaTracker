@@ -9,10 +9,13 @@ import android.view.View.OnTouchListener
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import bd.ctracker.com.ctracker.BaseApplication
 import bd.ctracker.com.ctracker.R
 import bd.ctracker.com.ctracker.model.CTUserInfo
 import bd.ctracker.com.ctracker.repository.RestApiService
+import bd.ctracker.com.ctracker.utility.PreferenceKeys
 import kotlinx.android.synthetic.main.activity_registration.*
 import timber.log.Timber
 
@@ -60,6 +63,7 @@ class RegistrationActivity : AppCompatActivity() {
 
             if (name.isBlank() || number.isBlank() || nid.isBlank()){
                 print("Invalid input. Please check and enter valid name, number and nid")
+                Toast.makeText(this, "Please check and enter valid name, number and nid.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -68,13 +72,19 @@ class RegistrationActivity : AppCompatActivity() {
 
             apiService.addUser(userInfo) {
 
-                if (it != null) {
+                if (it?.id != null) {
+                    BaseApplication.preference().edit().putInt(PreferenceKeys.userID, it.id).apply()
+                    BaseApplication.preference().edit().putString(PreferenceKeys.userName, it.name).apply()
+                    BaseApplication.preference().edit().putString(PreferenceKeys.userPhoneNumber, it.phoneNumber).apply()
+                    BaseApplication.preference().edit().putString(PreferenceKeys.userNID, it.nationalID).apply()
+                    BaseApplication.preference().edit().putString(PreferenceKeys.userDUID, it.userDuid).apply()
 
                     val intent = Intent(this, TrackingActivity::class.java)
                     this.startActivity(intent)
 
                 } else {
                     Timber.d("Error registering new user")
+                    Toast.makeText(this, "User was not added. Maybe already added.", Toast.LENGTH_SHORT).show()
                 }
             }
         }

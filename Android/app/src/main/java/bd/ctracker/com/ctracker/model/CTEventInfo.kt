@@ -4,17 +4,17 @@ import com.google.gson.annotations.SerializedName
 
 data class CTEventInfo(
     @SerializedName("eventId")
-    val eventId: String,
+    val eventId: Int?,
 
     @SerializedName("userId")
-    val userId: String,
+    val userId: Int?,
 
     @SerializedName("latitude")
-    val latitude: Double,
+    val latitude: Double?,
 
     @SerializedName("longitude")
-    val longitude: Double,
+    val longitude: Double?,
 
     @SerializedName("altitude")
-    val altitude: Double
+    val altitude: Double?
 )
