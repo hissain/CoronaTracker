@@ -19,6 +19,7 @@ Humanity is in crisis due to covid-19 global outbreak which is already declared 
 
 # Idea: Illustration
 
+Detail architecture can be explored [here](https://github.com/hissain/CoronaTracker/blob/dev/architecture/Architecture.md)
 ![Conceptual Illutration](https://github.com/hissain/CoronaTracker/blob/master/architecture/ctracker-datascheme.png)
 
 # System Design
@@ -26,7 +27,7 @@ Overall system design is available here,
 
 <img src="https://github.com/hissain/CoronaTracker/blob/master/architecture/SystemDesign.png" alt="Android Registration"/>
 
-https://github.com/hissain/CoronaTracker/blob/master/architecture/SystemDesign.png
+Link: [system design](https://github.com/hissain/CoronaTracker/blob/master/architecture/SystemDesign.png)
 
 # How It Works?
 We know most of the time we keep our smartphones with us even when we talk, walk, gather, hangout, dine, attend festivals and so on. If CoronaTracker app is ideally installed in the smartphones of all the citizens of the country, close contacts information of a covid-19 positive patient for a certain duration (i.e. more than 2/3 ~ 5/10 mins, configurable) can be easily detected from combination of GPS, Bluetooth and NFC data and logged into server. Thus, if one of the citizens is diagnosed as covid-19 positive, government can find the full list of close contacts with other detail information (i.e. contact durations, distances, times and places). That would of course generate very accurate information to identify the candidates eligible to be quarantined and further immediate testings.
@@ -38,11 +39,13 @@ We know most of the time we keep our smartphones with us even when we talk, walk
 4. GPS Inaccuracy - Initial proposal is to use GPS which has poor accuracy, around ~3 meters at best. That might not be feasible to detect close contacts for covid-19. However, if we can consider Bluetooth and NFC along with GPS, accurate information can be archived after creating an appropriate Algorithm.
 
 # Contributors Guidelines
-1. Backlogs can be found here (https://github.com/hissain/CoronaTracker/projects) for Android, iOS and Server developers. You can pick one task from here and start working. This video (https://www.youtube.com/watch?v=e3bjQX9jIBk) might help to the fresh contributors.
+1. Backlogs can be found [here](https://github.com/hissain/CoronaTracker/projects) for Android, iOS and Server developers. You can pick one task from here and start working. This [Youtube tutorial video](https://www.youtube.com/watch?v=e3bjQX9jIBk) might help to the fresh contributors.
 
-2. If you want to contribute to UI design side, we are waiting for a meaningful logo and thumbs for both Android and iOS application. Please request to us after you create logo/thumb sets.
+2. You can explore detail architecture of draft server data schemes, APIs [here](https://github.com/hissain/CoronaTracker/blob/dev/architecture/Architecture.md). Please explore to understand the current codebase so that it would be easier for you to contribute.
 
-3. We are also looking for Could EC2 and RDS instance. Anyone can also contribute to this porject by sharing could services for making the POC successful.
+3. If you want to contribute to UI design side, we are waiting for a meaningful logo and thumbs for both Android and iOS application. Please request to us after you create logo/thumb sets.
+
+4. We are also looking for Could EC2 and RDS instance. Anyone can also contribute to this porject by sharing could services for making the POC successful.
 
 
 # Application Major Screens
