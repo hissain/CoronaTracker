@@ -33,11 +33,6 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
 
-        <service
-                android:name="bd.ctracker.com.ctracker.service.ContactService"
-                android:enabled="true"
-                android:exported="true" />
-
         <activity
                 android:name="bd.ctracker.com.ctracker.activity.RegistrationActivity"
                 android:windowSoftInputMode="adjustResize"
@@ -50,6 +45,15 @@
 
         <activity android:name=".activity.TrackingActivity"
                 android:label="@string/title_activity_track" />
+
+        <receiver
+                android:name=".TrackingUpdateBroadcastReceiver"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="bd.ctracker.com.ctracker.TrackingUpdateBroadcastReceiver.ACTION_PROCESS_UPDATES" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
