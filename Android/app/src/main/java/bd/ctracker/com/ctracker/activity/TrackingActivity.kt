@@ -1,41 +1,35 @@
 package bd.ctracker.com.ctracker.activity
 
 import android.Manifest
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.view.View
-import android.view.View.OnTouchListener
-import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.work.*
 import bd.ctracker.com.ctracker.R
-import bd.ctracker.com.ctracker.model.CTUserInfo
-import bd.ctracker.com.ctracker.repository.RestApiService
-import bd.ctracker.com.ctracker.service.ContactService
+import bd.ctracker.com.ctracker.manager.TrackingManager
 import bd.ctracker.com.ctracker.utility.LOCATION_WORK_TAG
 import bd.ctracker.com.ctracker.worker.TrackContactWorker
-import kotlinx.android.synthetic.main.activity_registration.*
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
-import android.provider.Settings.Secure;
 
 private const val MY_PERMISSIONS_REQUEST_LOCATION = 1000
 
 class TrackingActivity : AppCompatActivity() {
 
     private val serviceIntent by lazy {
-        Intent(this, ContactService::class.java)
+        Intent(this, TrackingManager::class.java)
     }
+
+    private lateinit var trackingManager: TrackingManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         title = "Tracking"
         setContentView(R.layout.activity_tracker)
+
+        trackingManager = TrackingManager.getInstance(this)
 
         if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q){
             requestAccessFineLocation()
@@ -105,7 +99,8 @@ class TrackingActivity : AppCompatActivity() {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     Timber.d("Starting service")
 
-                    startService(serviceIntent)
+                    //startService(serviceIntent)
+                    trackingManager.startLocationUpdates()
 
                     val locationWorker =
                         PeriodicWorkRequestBuilder<TrackContactWorker>(15, TimeUnit.MINUTES)
