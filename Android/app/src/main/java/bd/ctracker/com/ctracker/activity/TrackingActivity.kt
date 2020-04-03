@@ -37,6 +37,15 @@ class TrackingActivity : AppCompatActivity() {
         title = "Tracking"
         setContentView(R.layout.activity_tracker)
 
+        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q){
+            requestAccessFineLocation()
+        } else{
+            requestAccessBackgroundLocation()
+        }
+    }
+
+    private fun requestAccessFineLocation() {
+
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -59,6 +68,33 @@ class TrackingActivity : AppCompatActivity() {
         }
     }
 
+    private fun requestAccessBackgroundLocation(){
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+            && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+            && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_BACKGROUND_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.ACCESS_BACKGROUND_LOCATION
+                ),
+                MY_PERMISSIONS_REQUEST_LOCATION
+            )
+        } else {
+            startService(serviceIntent)
+        }
+    }
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -89,14 +125,26 @@ class TrackingActivity : AppCompatActivity() {
                         )
 
                 } else {
-                    ActivityCompat.requestPermissions(
-                        this,
-                        arrayOf(
-                            Manifest.permission.ACCESS_FINE_LOCATION,
-                            Manifest.permission.ACCESS_COARSE_LOCATION
-                        ),
-                        MY_PERMISSIONS_REQUEST_LOCATION
-                    )
+                    if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q){
+                        ActivityCompat.requestPermissions(
+                            this,
+                            arrayOf(
+                                Manifest.permission.ACCESS_FINE_LOCATION,
+                                Manifest.permission.ACCESS_COARSE_LOCATION
+                            ),
+                            MY_PERMISSIONS_REQUEST_LOCATION
+                        )
+                    } else {
+                        ActivityCompat.requestPermissions(
+                            this,
+                            arrayOf(
+                                Manifest.permission.ACCESS_FINE_LOCATION,
+                                Manifest.permission.ACCESS_COARSE_LOCATION,
+                                Manifest.permission.ACCESS_BACKGROUND_LOCATION
+                            ),
+                            MY_PERMISSIONS_REQUEST_LOCATION
+                        )
+                    }
                 }
             }
         }
