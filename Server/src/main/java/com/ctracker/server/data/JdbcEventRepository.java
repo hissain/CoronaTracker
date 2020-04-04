@@ -27,9 +27,9 @@ public class JdbcEventRepository implements EventRepository {
             new CTEvent(
                     rs.getLong("event_id"),
                     rs.getLong("user_id"),
-                    rs.getFloat("event_lat"),
-                    rs.getFloat("event_lon"),
-                    rs.getFloat("event_alt"),
+                    rs.getDouble("event_lat"),
+                    rs.getDouble("event_lon"),
+                    rs.getDouble("event_alt"),
                     rs.getTimestamp("event_time").getTime()
             )
         );
@@ -47,9 +47,9 @@ public class JdbcEventRepository implements EventRepository {
 			            PreparedStatement ps =
 			                connection.prepareStatement(INSERT_SQL, new String[] {"event_id"});
 			            ps.setLong(1, event.getUserId());
-			            ps.setFloat(2, event.getLatitude());
-			            ps.setFloat(3, event.getLongitude());
-			            ps.setFloat(4, event.getAltitude());
+			            ps.setDouble(2, event.getLatitude());
+			            ps.setDouble(3, event.getLongitude());
+			            ps.setDouble(4, event.getAltitude());
 			            return ps;
 			        }
 			    },

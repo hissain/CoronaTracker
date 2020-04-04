@@ -4,13 +4,13 @@ public class CTEvent {
 
 	private Long 	eventId;
 	private Long 	userId;
-	private Float  	longitude;
-	private Float  	latitude;
-	private Float	altitude;
+	private Double  	longitude;
+	private Double  	latitude;
+	private Double	altitude;
 	private Long	datetime;
 
 	public CTEvent() {}
-	public CTEvent(Long userId, Float longitude, Float latitude, Float altitude, Long datetime) {
+	public CTEvent(Long userId, Double longitude, Double latitude, Double altitude, Long datetime) {
 		super();
 		this.userId = userId;
 		this.longitude = longitude;
@@ -19,7 +19,7 @@ public class CTEvent {
 		this.datetime = datetime;
 	}
 
-	public CTEvent(Long eventId, Long userId, Float longitude, Float latitude, Float altitude, Long datetime) {
+	public CTEvent(Long eventId, Long userId, Double longitude, Double latitude, Double altitude, Long datetime) {
 		super();
 		this.eventId = eventId;
 		this.userId = userId;
@@ -29,7 +29,7 @@ public class CTEvent {
 		this.datetime = datetime;
 	}
 
-	public CTEvent(Long userId, Float longitude, Float latitude, Float altitude) {
+	public CTEvent(Long userId, Double longitude, Double latitude, Double altitude) {
 		super();
 		this.userId = userId;
 		this.longitude = longitude;
@@ -53,27 +53,27 @@ public class CTEvent {
 		this.userId = userId;
 	}
 
-	public Float getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(Float longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 
-	public Float getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(Float latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
-	public Float getAltitude() {
+	public Double getAltitude() {
 		return altitude;
 	}
 
-	public void setAltitude(Float altitude) {
+	public void setAltitude(Double altitude) {
 		this.altitude = altitude;
 	}
 
@@ -83,5 +83,10 @@ public class CTEvent {
 
 	public void setDatetime(Long datetime) {
 		this.datetime = datetime;
+	}
+	
+	@Override
+	public String toString() {
+		return "id: " + eventId + " user: " + userId + " lat: " + latitude + " lon: " + longitude + " alt: " + altitude;
 	}
 }
