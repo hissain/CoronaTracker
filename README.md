@@ -49,9 +49,10 @@ We know most of the time we keep our smartphones with us even when we talk, walk
 
 
 # Application Major Screens
+
 <img align="left" src="https://github.com/hissain/CoronaTracker/blob/master/architecture/Screenshots/Android/Screenshot_Registration.png" alt="Android Registration" width="300"/>
 
-<img align="center"  src="https://github.com/hissain/CoronaTracker/blob/master/architecture/Screenshots/iOS/Screenshot_Registration.png" alt="Android Registration" width="245"/>
+<img align="center"  src="https://github.com/hissain/CoronaTracker/blob/dev/architecture/Screenshots/iOS/Screenshot_Registration_bn.png" alt="Android Registration" width="245"/>
 
 
 # Contact
