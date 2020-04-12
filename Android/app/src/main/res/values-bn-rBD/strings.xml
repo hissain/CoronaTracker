@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoronaTracker</string>
+    <string name="title_activity_reg">রেজিস্ট্রেশান</string>
+    <string name="title_activity_track">ট্র্যাকিং</string>
+    <string name="enter_name">নাম প্রবেশ করুন</string>
+    <string name="enter_phone_number">ফোন নাম্বার প্রবেশ করুন</string>
+    <string name="enter_nid_national_id">ন্যাশনাল আই ডি প্রবেশ করুন</string>
+    <string name="complete_registration">রেজিস্ট্রেশান কমপ্লিট করুন</string>
+    <string name="facing_problem">কোন প্রকার সমস্যা হলে এখানে ক্লিক করুন</string>
+</resources>

@@ -3,8 +3,12 @@ package bd.ctracker.com.ctracker
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.res.Configuration
+import android.content.res.Resources
+import android.os.LocaleList
 import android.preference.PreferenceManager
-import timber.log.Timber
+import java.util.*
+
 
 class BaseApplication : Application() {
 
@@ -22,9 +26,5 @@ class BaseApplication : Application() {
         fun preference() : SharedPreferences {
             return PreferenceManager.getDefaultSharedPreferences(applicationContext())
         }
-    }
-
-    override fun onCreate() {
-        super.onCreate()
     }
 }

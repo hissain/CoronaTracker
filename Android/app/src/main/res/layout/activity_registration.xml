@@ -25,7 +25,7 @@
             android:layout_marginLeft="20dp"
             android:paddingLeft="5dp"
             android:background="#fff"
-            android:hint="Enter Name" />
+            android:hint="@string/enter_name" />
 
     <EditText
             android:id="@+id/et_number"
@@ -35,7 +35,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="#fff"
-            android:hint="Enter Phone Number"
+            android:hint="@string/enter_phone_number"
             android:inputType="number"
             android:paddingLeft="5dp" />
     <EditText
@@ -48,12 +48,12 @@
             android:layout_marginLeft="20dp"
             android:paddingLeft="5dp"
             android:background="#fff"
-            android:hint="Enter NID (National ID)" />
+            android:hint="@string/enter_nid_national_id" />
     <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_reg"
-            android:text="Register"
+            android:text="@string/complete_registration"
             android:background="#F1DB12"
             android:textColor="#000"
             android:layout_marginTop="10dp"
@@ -67,5 +67,5 @@
             android:layout_marginTop="10dp"
             android:textColor="#fff"
             android:textSize="20sp"
-            android:text="Facing problem? visit here"/>
+            android:text="@string/facing_problem"/>
 </LinearLayout>
