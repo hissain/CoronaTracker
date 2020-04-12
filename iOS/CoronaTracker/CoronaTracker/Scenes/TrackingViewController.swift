@@ -15,8 +15,7 @@ class TrackingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Tracking"
-
+        self.title = NSLocalizedString("current_state", comment: "Complete Registration")
         self.locationService.requestPermission()
     }
 }

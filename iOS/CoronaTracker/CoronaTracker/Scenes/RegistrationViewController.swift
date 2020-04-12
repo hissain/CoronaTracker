@@ -22,7 +22,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Complete Registration"
+        self.title = NSLocalizedString("complete_registration", comment: "Complete Registration")
         self.registerObservers()
 
         self.btnRegister.addTarget(self, action: #selector(signup(button:)), for: UIControl.Event.touchUpInside)

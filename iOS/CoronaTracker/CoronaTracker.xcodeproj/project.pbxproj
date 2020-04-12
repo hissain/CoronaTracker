@@ -24,6 +24,7 @@
 		14A57E542433C859009A9235 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E532433C859009A9235 /* Constants.swift */; };
 		14A57E562433DC93009A9235 /* RestRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E552433DC93009A9235 /* RestRequestService.swift */; };
 		14A57E582433F12E009A9235 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E572433F12E009A9235 /* TrackingViewController.swift */; };
+		14D361FA2443C53F00EDB897 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D361FC2443C53F00EDB897 /* Localizable.strings */; };
 		D46E1E5D6FEA9752D6E7EC57 /* Pods_CoronaTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,13 @@
 		14A57E532433C859009A9235 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		14A57E552433DC93009A9235 /* RestRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestService.swift; sourceTree = "<group>"; };
 		14A57E572433F12E009A9235 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		14D361F42443BEF600EDB897 /* bn-BD */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "bn-BD"; path = "bn-BD.lproj/Main.strings"; sourceTree = "<group>"; };
+		14D361F52443BEF600EDB897 /* bn-BD */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "bn-BD"; path = "bn-BD.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		14D361F62443C1BB00EDB897 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
+		14D361F72443C1BC00EDB897 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		14D361FB2443C53F00EDB897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		14D361FD2443C54A00EDB897 /* bn-BD */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "bn-BD"; path = "bn-BD.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		14D361FE2443C54A00EDB897 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36FF02488DD848740E1F7CC6 /* Pods-CoronaTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CoronaTrackerTests/Pods-CoronaTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8774F73EF21D39C6678D667E /* Pods_CoronaTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +144,7 @@
 				14A57DF8242F49BD009A9235 /* LaunchScreen.storyboard */,
 				14A57DED242F49BC009A9235 /* AppDelegate.swift */,
 				14A57DEF242F49BC009A9235 /* SceneDelegate.swift */,
+				14D361FC2443C53F00EDB897 /* Localizable.strings */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -265,6 +274,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"bn-BD",
+				hi,
 			);
 			mainGroup = 14A57DE1242F49BC009A9235;
 			productRefGroup = 14A57DEB242F49BC009A9235 /* Products */;
@@ -283,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A57DFA242F49BD009A9235 /* LaunchScreen.storyboard in Resources */,
+				14D361FA2443C53F00EDB897 /* Localizable.strings in Resources */,
 				14A57DF7242F49BD009A9235 /* Assets.xcassets in Resources */,
 				14A57DF5242F49BC009A9235 /* Main.storyboard in Resources */,
 			);
@@ -404,6 +416,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				14A57DF4242F49BC009A9235 /* Base */,
+				14D361F42443BEF600EDB897 /* bn-BD */,
+				14D361F62443C1BB00EDB897 /* hi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -412,8 +426,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				14A57DF9242F49BD009A9235 /* Base */,
+				14D361F52443BEF600EDB897 /* bn-BD */,
+				14D361F72443C1BC00EDB897 /* hi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		14D361FC2443C53F00EDB897 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D361FB2443C53F00EDB897 /* en */,
+				14D361FD2443C54A00EDB897 /* bn-BD */,
+				14D361FE2443C54A00EDB897 /* hi */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -423,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -483,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

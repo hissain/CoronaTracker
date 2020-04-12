@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  CoronaTracker
+
+  Created by Hissain on 13/4/20.
+  Copyright © 2020 Corona Tracker. All rights reserved.
+*/
+
+
+/* Class = "UIButton"; normalTitle = "Complete Regitration"; ObjectID = "cTf-Iq-OHg"; */
+"complete_registration" = "पूर्ण प्रतिगमन";
+
+/* Class = "UILabel"; text = "App State : TRACKING"; ObjectID = "epk-Xj-x4E"; */
+"current_state" = "आवेदन राज्य: वर्तमान में ट्रेसिंग";

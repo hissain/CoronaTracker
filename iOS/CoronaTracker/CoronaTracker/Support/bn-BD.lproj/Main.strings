@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "Enter your phone number"; ObjectID = "AZL-VQ-pZC"; */
+"AZL-VQ-pZC.placeholder" = "আপনার ফোন নাম্বার";
+
+/* Class = "UITextField"; placeholder = "Enter your name"; ObjectID = "Dwe-0Z-cS8"; */
+"Dwe-0Z-cS8.placeholder" = "আপনার সম্পুর্ন নাম";
+
+/* Class = "UITextField"; placeholder = "Enter your NID (National ID)"; ObjectID = "Xfj-A7-l4Y"; */
+"Xfj-A7-l4Y.placeholder" = "আপনার ন্যাশনাল আই ডি নাম্বার";
+
+/* Class = "UIButton"; normalTitle = "Complete Regitration"; ObjectID = "cTf-Iq-OHg"; */
+"cTf-Iq-OHg.normalTitle" = "রেজিস্ট্রেশান সম্পুর্ন করুন";
+
+/* Class = "UILabel"; text = "App State : TRACKING"; ObjectID = "epk-Xj-x4E"; */
+"epk-Xj-x4E.text" = "বর্তমান অবস্থা: ট্র্যাকিং";
+
+/* Class = "UIButton"; normalTitle = "Facing problem? Visit here"; ObjectID = "gXB-nU-JDr"; */
+"gXB-nU-JDr.normalTitle" = "কোন প্রকার সমস্যা? এখানে ক্লিক করুন";
