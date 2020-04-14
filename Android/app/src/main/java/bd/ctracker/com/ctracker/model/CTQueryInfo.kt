@@ -15,5 +15,5 @@ data class CTQueryInfo(
     val maxDateCount: Int?,
 
     @SerializedName("accessToken")
-    val accessToken: String?,
+    val accessToken: String?
 )
