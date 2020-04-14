@@ -21,6 +21,6 @@ interface RestApi {
     fun addEvent(@Body eventData: CTEventInfo): Call<CTEventInfo>
 
     @Headers("Content-Type: application/json")
-    @GET("fetch")
+    @POST("fetch")
     fun fetchCandidates(@Body eventData: CTQueryInfo): Call<CTEventInfo>
 }

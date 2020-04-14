@@ -1,6 +1,6 @@
 package com.ctracker.server.controller;
 
-import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +18,7 @@ public class QueryController {
 	private QueryProcessor processor;
 
 	@PostMapping("/fetch")
-	List<CTUser> addUser(@RequestBody CTQuery queryParam) {
+	Set<CTUser> addUser(@RequestBody CTQuery queryParam) {
 
 		if (queryParam.getAccessToken().equals("1234")) {
 			return processor.process(queryParam);
