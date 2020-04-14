@@ -1,6 +1,7 @@
 package bd.ctracker.com.ctracker.repository
 
 import bd.ctracker.com.ctracker.model.CTEventInfo
+import bd.ctracker.com.ctracker.model.CTQueryInfo
 import bd.ctracker.com.ctracker.model.CTUserInfo
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
@@ -50,6 +51,24 @@ class RestApiService {
     fun addEvent(eventData: CTEventInfo, onResult: (CTEventInfo?) -> Unit){
         val retrofit = ServiceBuilder.buildService(RestApi::class.java)
         retrofit.addEvent(eventData).enqueue(
+            object : Callback<CTEventInfo> {
+                override fun onFailure(call: Call<CTEventInfo>, t: Throwable) {
+                    Timber.d("Failure: %s", t.stackTrace)
+                }
+                override fun onResponse( call: Call<CTEventInfo>, response: Response<CTEventInfo>) {
+                    Timber.d("Success with response code: %s", response.code())
+                    Timber.d("Success with response code: %s", response.code())
+                    val addedEvent = response.body()
+                    Timber.d("Added user: %s", addedEvent)
+                    onResult(addedEvent)
+                }
+            }
+        )
+    }
+
+    fun fetchCandidates(eventData: CTQueryInfo, onResult: (CTEventInfo?) -> Unit){
+        val retrofit = ServiceBuilder.buildService(RestApi::class.java)
+        retrofit.fetchCandidates(eventData).enqueue(
             object : Callback<CTEventInfo> {
                 override fun onFailure(call: Call<CTEventInfo>, t: Throwable) {
                     Timber.d("Failure: %s", t.stackTrace)
