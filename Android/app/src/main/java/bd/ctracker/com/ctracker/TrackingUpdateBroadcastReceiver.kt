@@ -3,7 +3,6 @@ package bd.ctracker.com.ctracker
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.widget.Toast
 import bd.ctracker.com.ctracker.model.CTEventInfo
 import bd.ctracker.com.ctracker.model.CTLocation
@@ -15,7 +14,7 @@ import timber.log.Timber
 
 class TrackingUpdateBroadcastReceiver: BroadcastReceiver() {
 
-    private val coroutineScope = CoroutineScope(Job() + Dispatchers.IO)
+    private val scope = CoroutineScope(Job() + Dispatchers.IO)
 
     override fun onReceive(context: Context?, intent: Intent?) {
 
@@ -38,7 +37,7 @@ class TrackingUpdateBroadcastReceiver: BroadcastReceiver() {
                             loc += "Lat: ${location.latitude} -- lon: ${location.longitude} -- alt: ${location.altitude} \n"
                             Timber.i( "Location ${location.latitude}, ${location.longitude} & ${location.altitude}")
 
-                            coroutineScope.launch {
+                            scope.launch {
                                 // Save close contact data/Send to data to server
                                 withContext(Dispatchers.Main) {
                                     Toast.makeText(
@@ -76,9 +75,8 @@ class TrackingUpdateBroadcastReceiver: BroadcastReceiver() {
                                 }
                             }
                         }
-                        Log.d("TrackingUpdate", "Location updates :-\n $loc");
+                        Timber.d("Location updates :-\n $loc");
                     }
-
                 }
             }
 
