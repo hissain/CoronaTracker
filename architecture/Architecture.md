@@ -21,10 +21,10 @@
 <img src="https://github.com/hissain/CoronaTracker/blob/dev/architecture/Screenshots/Server/pm_fetch.png" alt="Fetch API" width="600"/>
 
 ### Postman Tests
-You can download postman API collection from here https://github.com/hissain/CoronaTracker/blob/dev/architecture/ctracker.postman_collection.json and import to your Postman for testing with your locally setup localhost servers.
+You can download postman API collection from [here](https://github.com/hissain/CoronaTracker/blob/dev/architecture/ctracker.postman_collection.json) and import to your Postman for testing with your locally setup localhost servers.
 
 ### Database Tests
-You can download the .sql files exported here https://github.com/hissain/CoronaTracker/blob/dev/architecture/ctracker.sql. Running this to sql will create above schemes and insert some dummy data for testing. You can configure in you localhost database server.
+You can download the .sql files exported [here](https://github.com/hissain/CoronaTracker/blob/dev/architecture/ctracker.sql). Running this to sql will create above schemes and insert some dummy data for testing. You can configure in you localhost database server.
 
 # 2. Android Architecture #
 
