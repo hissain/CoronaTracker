@@ -19,9 +19,17 @@ class CoronaTrackerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFetch() {
+
+        let q = CTQueryInfo()
+        q.accessToken = "1234"
+        q.maxContactDistance = 100
+        q.userId = 1
+        q.maxDateCount = 200
+
+        RestRequestService().fetchCandidates(queryInfo: q) { (result) in
+            print("candidates: \(String(describing: result))")
+        }
     }
 
     func testPerformanceExample() {

@@ -25,6 +25,7 @@
 		14A57E562433DC93009A9235 /* RestRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E552433DC93009A9235 /* RestRequestService.swift */; };
 		14A57E582433F12E009A9235 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E572433F12E009A9235 /* TrackingViewController.swift */; };
 		14D361FA2443C53F00EDB897 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D361FC2443C53F00EDB897 /* Localizable.strings */; };
+		14D3620024468EDC00EDB897 /* CTQueryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D361FF24468EDC00EDB897 /* CTQueryInfo.swift */; };
 		D46E1E5D6FEA9752D6E7EC57 /* Pods_CoronaTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		14D361FB2443C53F00EDB897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		14D361FD2443C54A00EDB897 /* bn-BD */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "bn-BD"; path = "bn-BD.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		14D361FE2443C54A00EDB897 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		14D361FF24468EDC00EDB897 /* CTQueryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTQueryInfo.swift; sourceTree = "<group>"; };
 		36FF02488DD848740E1F7CC6 /* Pods-CoronaTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CoronaTrackerTests/Pods-CoronaTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8774F73EF21D39C6678D667E /* Pods_CoronaTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 			children = (
 				14A57E13242FD5FA009A9235 /* CTUserInfo.swift */,
 				14A57E1B24300026009A9235 /* CTEventInfo.swift */,
+				14D361FF24468EDC00EDB897 /* CTQueryInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				14A57E1C24300026009A9235 /* CTEventInfo.swift in Sources */,
 				14A57E1A242FFD42009A9235 /* RestApiService.swift in Sources */,
 				14A57E16242FD9BF009A9235 /* SecStorageService.swift in Sources */,
+				14D3620024468EDC00EDB897 /* CTQueryInfo.swift in Sources */,
 				14A57E14242FD5FA009A9235 /* CTUserInfo.swift in Sources */,
 				14A57E542433C859009A9235 /* Constants.swift in Sources */,
 				14A57E562433DC93009A9235 /* RestRequestService.swift in Sources */,

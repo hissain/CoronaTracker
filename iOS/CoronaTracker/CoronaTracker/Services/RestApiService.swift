@@ -28,7 +28,6 @@ class RestApiService {
             print(error.localizedDescription)
         }
 
-
         AF.request(request)
             .validate()
             .responseJSON { (response) in
@@ -45,7 +44,6 @@ class RestApiService {
                 }
         }
     }
-
 
     func registerEvent(eventInfo: CTEventInfo, completionBlock: @escaping (CTEventInfo?) -> Void ){
 
@@ -74,6 +72,40 @@ class RestApiService {
                         addedEvent = try? JSONDecoder().decode(CTEventInfo.self, from: data)
                     }
                     completionBlock(addedEvent)
+                case .failure(let error):
+                    print("Error: \(error)")
+                    completionBlock(nil)
+                }
+        }
+    }
+
+    func fetchCandidates(userInfo: CTQueryInfo, completionBlock: @escaping ([CTUserInfo]?) -> Void ){
+
+        var request = URLRequest(url: URL.init(string: "http://localhost:8080/fetch")!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(userInfo)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            print("Request body: \(String(describing: jsonString))")
+            request.httpBody = jsonData
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+
+        AF.request(request)
+            .validate()
+            .responseJSON { (response) in
+                switch response.result {
+                case .success( _):
+                    var candidates: [CTUserInfo]? = nil
+                    if let data = response.data {
+                        candidates = try? JSONDecoder().decode([CTUserInfo].self, from: data)
+                    }
+                    completionBlock(candidates)
                 case .failure(let error):
                     print("Error: \(error)")
                     completionBlock(nil)
