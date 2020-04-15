@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import CocoaLumberjack
 
 class LocationService: NSObject, CLLocationManagerDelegate {
 
@@ -39,18 +40,18 @@ class LocationService: NSObject, CLLocationManagerDelegate {
         } else if status == .authorizedWhenInUse {
             startLocationService()
         } else if status == .denied {
-            print("Location authorization denied!")
+            DDLogInfo("Location authorization denied!")
         } else if status == .restricted {
-            print("Location authorization restricted!")
+            DDLogInfo("Location authorization restricted!")
         }else if status == .notDetermined{
-            print("Location authorization not determined!")
+            DDLogInfo("Location authorization not determined!")
         }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
         if let location = locations.last {
-            print("New location is \(location)")
+            DDLogInfo("New location is \(location)")
             RestRequestService().addEvent(location: location)
         }
     }

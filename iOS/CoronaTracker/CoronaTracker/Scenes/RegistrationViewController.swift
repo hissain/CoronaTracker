@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CocoaLumberjack
 
 class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
@@ -45,7 +46,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         guard let nationalID = tfNationalID.text, !nationalID.isEmpty else { return }
         let deviceId = UUID.init().uuidString
 
-        print("Proceed with name: \(name), number: \(number) and ID: \(nationalID)")
+        DDLogInfo("Proceed with name: \(name), number: \(number) and ID: \(nationalID)")
 
         // Saving numbers to Preference/ User default
 
@@ -75,9 +76,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
 //
 //        apiService.registerEvent(eventInfo: event) { (result) in
 //            if let e = result, let id = e.eventId {
-//                print("Success sending to server, event id: \(id)")
+//                DDLogInfo("Success sending to server, event id: \(id)")
 //            }else {
-//                print("Filure sending to server, event")
+//                DDLogInfo("Filure sending to server, event")
 //            }
 //        }
         

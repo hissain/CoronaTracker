@@ -28,7 +28,7 @@ class CoronaTrackerTests: XCTestCase {
         q.maxDateCount = 200
 
         RestRequestService().fetchCandidates(queryInfo: q) { (result) in
-            print("candidates: \(String(describing: result))")
+            DDLogInfo("candidates: \(String(describing: result))")
         }
     }
 

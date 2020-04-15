@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import CocoaLumberjack
 
 protocol RestRequest {
 
@@ -22,11 +23,11 @@ class RestRequestService: RestRequest {
 
         RestApiService().registerUser(userInfo: userInfo) { (result) in
             if let user = result, let id = user.id {
-                print("Success sending to server, user: \(user)")
+                DDLogInfo("Success sending to server, user: \(user)")
                 UserStoreData.userID = String(id)
                 onResult(true)
             }else {
-                print("Failure sending userInfo to server")
+                DDLogInfo("Failure sending userInfo to server")
                 onResult(false)
             }
         }
@@ -42,9 +43,9 @@ class RestRequestService: RestRequest {
 
         RestApiService().registerEvent(eventInfo: event) { (result) in
             if let event = result, let id = event.eventId {
-                print("Success sending to server, event id: \(id)")
+                DDLogInfo("Success sending to server, event id: \(id)")
             }else {
-                print("Filure sending event to server")
+                DDLogInfo("Filure sending event to server")
             }
         }
     }
@@ -56,10 +57,10 @@ class RestRequestService: RestRequest {
         RestApiService().fetchCandidates(userInfo: queryInfo) { (result) in
 
             if let users = result {
-                print("Success retrieving \(users.count) canidates from server")
+                DDLogInfo("Success retrieving \(users.count) canidates from server")
                 onResult(users)
             }else {
-                print("Failure retrieving canidates from server")
+                DDLogInfo("Failure retrieving canidates from server")
                 onResult(nil)
             }
         }

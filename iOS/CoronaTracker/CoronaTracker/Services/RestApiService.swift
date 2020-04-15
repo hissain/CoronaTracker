@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import CocoaLumberjack
 
 class RestApiService {
 
@@ -21,11 +22,11 @@ class RestApiService {
         do {
             let jsonData = try jsonEncoder.encode(userInfo)
             let jsonString = String(data: jsonData, encoding: .utf8)
-            print("Request body: \(String(describing: jsonString))")
+            DDLogInfo("Request body: \(String(describing: jsonString))")
             request.httpBody = jsonData
         }
         catch {
-            print(error.localizedDescription)
+            DDLogInfo(error.localizedDescription)
         }
 
         AF.request(request)
@@ -39,7 +40,7 @@ class RestApiService {
                     }
                     completionBlock(addedUser)
                 case .failure(let error):
-                    print("Error: \(error)")
+                    DDLogInfo("Error: \(error)")
                     completionBlock(nil)
                 }
         }
@@ -55,11 +56,11 @@ class RestApiService {
         do {
             let jsonData = try jsonEncoder.encode(eventInfo)
             let jsonString = String(data: jsonData, encoding: .utf8)
-            print("Request body: \(String(describing: jsonString))")
+            DDLogInfo("Request body: \(String(describing: jsonString))")
             request.httpBody = jsonData
         }
         catch {
-            print(error.localizedDescription)
+            DDLogInfo(error.localizedDescription)
         }
 
         AF.request(request)
@@ -73,7 +74,7 @@ class RestApiService {
                     }
                     completionBlock(addedEvent)
                 case .failure(let error):
-                    print("Error: \(error)")
+                    DDLogInfo("Error: \(error)")
                     completionBlock(nil)
                 }
         }
@@ -89,11 +90,11 @@ class RestApiService {
         do {
             let jsonData = try jsonEncoder.encode(userInfo)
             let jsonString = String(data: jsonData, encoding: .utf8)
-            print("Request body: \(String(describing: jsonString))")
+            DDLogInfo("Request body: \(String(describing: jsonString))")
             request.httpBody = jsonData
         }
         catch {
-            print(error.localizedDescription)
+            DDLogInfo(error.localizedDescription)
         }
 
         AF.request(request)
@@ -107,7 +108,7 @@ class RestApiService {
                     }
                     completionBlock(candidates)
                 case .failure(let error):
-                    print("Error: \(error)")
+                    DDLogInfo("Error: \(error)")
                     completionBlock(nil)
                 }
         }

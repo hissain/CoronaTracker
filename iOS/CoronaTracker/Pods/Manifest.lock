@@ -1,16 +1,22 @@
 PODS:
   - Alamofire (5.0.5)
+  - CocoaLumberjack/Core (3.6.1)
+  - CocoaLumberjack/Swift (3.6.1):
+    - CocoaLumberjack/Core
 
 DEPENDENCIES:
   - Alamofire
+  - CocoaLumberjack/Swift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CocoaLumberjack
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
 
-PODFILE CHECKSUM: b78210fba29a4005b390c0db3f3ba11c0dea9510
+PODFILE CHECKSUM: 6d784f4a9d59787759c2b5ab0d6be8692e48cc28
 
 COCOAPODS: 1.9.1
