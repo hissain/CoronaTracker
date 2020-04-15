@@ -1,3 +1,5 @@
+#### ডকুমেন্ট টি বাংলায় পড়তে [এখানে](https://github.com/hissain/CoronaTracker/blob/dev/README.bn.md) ক্লিক করুন ####
+
 # CoronaTracker
 This project is to build application to track the close contacts within last 14 days for a covid-19 positive patient
 
