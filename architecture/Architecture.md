@@ -1,5 +1,23 @@
 # 1. Server Architecture #
 
+## 1.1.0 Database Tests
+
+### Database user
+Please create phpmyadmin new user `(id: admin, passwd: admin)` with all previlages. Or you can change the user/password as your own from SpringBoot app/ `application.properties`
+
+``` # MySQL
+spring.datasource.url=jdbc:mysql://192.168.64.2:3306/ctracker
+spring.datasource.username=admin
+spring.datasource.password=admin
+
+logging.level.org.springframework=info
+logging.level.org.springframework.jdbc=DEBUG
+```
+
+### Dummy data insertion
+
+You can download the .sql files exported [here](https://github.com/hissain/CoronaTracker/blob/dev/architecture/ctracker.sql). Running this to sql will create above schemes and insert some dummy data for testing. You can configure in you localhost database server.
+
 ## 1.1. Server Table schemes (users, events)
 
 ### users table
@@ -22,9 +40,6 @@
 
 ### Postman Tests
 You can download postman API collection from [here](https://github.com/hissain/CoronaTracker/blob/dev/architecture/ctracker.postman_collection.json) and import to your Postman for testing with your locally setup localhost servers.
-
-### Database Tests
-You can download the .sql files exported [here](https://github.com/hissain/CoronaTracker/blob/dev/architecture/ctracker.sql). Running this to sql will create above schemes and insert some dummy data for testing. You can configure in you localhost database server.
 
 # 2. Android Architecture #
 
