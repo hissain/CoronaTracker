@@ -35,6 +35,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We want to help you find your location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We want to help you find your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We want to help you find your location</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -57,13 +63,8 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
+		<string>processing</string>
 	</array>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We want to help you find your location</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We want to help you find your location</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We want to help you find your location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

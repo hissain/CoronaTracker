@@ -12,12 +12,16 @@ import CocoaLumberjack
 
 class RestApiService {
 
-    func registerUser(userInfo: CTUserInfo, completionBlock: @escaping (CTUserInfo?) -> Void ){
-
-        var request = URLRequest(url: URL.init(string: "http://localhost:8080/users")!)
+    private func generateRequest(forPath: String) -> URLRequest {
+        var request = URLRequest(url: URL.init(string: "http://192.168.1.107:8080/\(forPath)")!)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        return request
+    }
 
+    func registerUser(userInfo: CTUserInfo, completionBlock: @escaping (CTUserInfo?) -> Void ){
+
+        var request = generateRequest(forPath: "users")
         let jsonEncoder = JSONEncoder()
         do {
             let jsonData = try jsonEncoder.encode(userInfo)
@@ -48,10 +52,7 @@ class RestApiService {
 
     func registerEvent(eventInfo: CTEventInfo, completionBlock: @escaping (CTEventInfo?) -> Void ){
 
-        var request = URLRequest(url: URL.init(string: "http://localhost:8080/events")!)
-        request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-
+        var request = generateRequest(forPath: "events")
         let jsonEncoder = JSONEncoder()
         do {
             let jsonData = try jsonEncoder.encode(eventInfo)
@@ -82,10 +83,7 @@ class RestApiService {
 
     func fetchCandidates(userInfo: CTQueryInfo, completionBlock: @escaping ([CTUserInfo]?) -> Void ){
 
-        var request = URLRequest(url: URL.init(string: "http://localhost:8080/fetch")!)
-        request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-
+        var request = generateRequest(forPath: "fetch")
         let jsonEncoder = JSONEncoder()
         do {
             let jsonData = try jsonEncoder.encode(userInfo)
