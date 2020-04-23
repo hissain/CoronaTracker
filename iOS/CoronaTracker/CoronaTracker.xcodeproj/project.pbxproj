@@ -26,6 +26,7 @@
 		14A57E582433F12E009A9235 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A57E572433F12E009A9235 /* TrackingViewController.swift */; };
 		14D361FA2443C53F00EDB897 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D361FC2443C53F00EDB897 /* Localizable.strings */; };
 		14D3620024468EDC00EDB897 /* CTQueryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D361FF24468EDC00EDB897 /* CTQueryInfo.swift */; };
+		14D36204245258D400EDB897 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14D36203245258D400EDB897 /* Settings.bundle */; };
 		D46E1E5D6FEA9752D6E7EC57 /* Pods_CoronaTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		14D361FE2443C54A00EDB897 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		14D361FF24468EDC00EDB897 /* CTQueryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTQueryInfo.swift; sourceTree = "<group>"; };
 		14D3620224469D4400EDB897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		14D36203245258D400EDB897 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		36FF02488DD848740E1F7CC6 /* Pods-CoronaTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CoronaTrackerTests/Pods-CoronaTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8774F73EF21D39C6678D667E /* Pods_CoronaTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D16E2E4034FFAF8D334040 /* Pods_CoronaTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 		14A57E0F242FAD07009A9235 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				14D36203245258D400EDB897 /* Settings.bundle */,
 				14A57DFB242F49BD009A9235 /* Info.plist */,
 				14A57DF6242F49BD009A9235 /* Assets.xcassets */,
 				14A57DF3242F49BC009A9235 /* Main.storyboard */,
@@ -299,6 +302,7 @@
 			files = (
 				14A57DFA242F49BD009A9235 /* LaunchScreen.storyboard in Resources */,
 				14D361FA2443C53F00EDB897 /* Localizable.strings in Resources */,
+				14D36204245258D400EDB897 /* Settings.bundle in Resources */,
 				14A57DF7242F49BD009A9235 /* Assets.xcassets in Resources */,
 				14A57DF5242F49BC009A9235 /* Main.storyboard in Resources */,
 			);
