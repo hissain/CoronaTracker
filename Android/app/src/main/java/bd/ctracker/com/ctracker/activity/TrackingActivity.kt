@@ -14,7 +14,7 @@ import bd.ctracker.com.ctracker.worker.TrackContactWorker
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
-private const val MY_PERMISSIONS_REQUEST_LOCATION = 1000
+private const val MY_PERMISSIONS_REQUEST_LOCATION = 1001
 
 class TrackingActivity : AppCompatActivity() {
 
